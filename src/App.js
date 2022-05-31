@@ -3,12 +3,12 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import NavBar from './components/NavBar/NavBar'
 import AsideBar from './components/AsideBar/AsideBar'
-import Login from './components/Login_Page/Login';
-import HomePage from './components/Home_Page/HomePage';
-import PartnersPage from './components/Partners_Page/PartnersPage'
-import PlanningTripPage from './components/Planning_Trip_Page/PlanningTripPage'
-import ProfilePage from './components/Profile_Page/ProfilePage'
-import Register from './components/Register_Page/Register';
+import Login from './screens/Login_Page/Login';
+import HomePage from './screens/Home_Page/HomePage';
+import PartnersPage from './screens/Partners_Page/PartnersPage'
+import PlanningTripPage from './screens/Planning_Trip_Page/PlanningTripPage'
+import ProfilePage from './screens/Profile_Page/ProfilePage'
+import Register from './screens/Register_Page/Register';
 import { getUsers } from './Apis/MockApi/requestsUsers'
 
 

@@ -2,7 +2,9 @@ import React from 'react'
 
 function PartnersPage() {
   return (
-    <div>PartnersPage</div>
+    <div>
+      <h1>Partners</h1>
+    </div>
   )
 }
 
