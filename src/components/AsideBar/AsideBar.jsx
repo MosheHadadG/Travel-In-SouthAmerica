@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom'
 import ProfileImgCircle from '../../ResusbleUi/profileImgCircle/profileImgCircle'
 import './AsideBar.css'
 
-function AsideBar({ userSignIn }) {
+function AsideBar({ userSignIn, setSignInUp,  setUserSignInUP  }) {
+
+  const handleLogout = () => {
+    setSignInUp(false);
+    setUserSignInUP({});
+  }
+
   return (
     <aside className='adise-bar'>
       <nav className='aside-nav'>
@@ -17,7 +23,7 @@ function AsideBar({ userSignIn }) {
               <Link to={`/profile/${userSignIn.id}`}><i className="fa-solid fa-user"></i> <li>My Profile</li></Link>
               <ProfileImgCircle srcImg={userSignIn.avatar} />
               <h3>{`Welcome ${userSignIn.firstName} ${userSignIn.lastname}`}</h3>
-      
+              <Link onClick={handleLogout} to="/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</Link>
             </>
           }
 

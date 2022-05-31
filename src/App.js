@@ -33,10 +33,10 @@ function App() {
     }
     updateUsers();
   }, [])
+  useEffect(()=> {
+    console.log(signIn, userSignIn)
 
-  useEffect(() => {
-    console.log(userSignIn)
-  },[userSignIn])
+  },[signIn, userSignIn]) 
 
   return (
     <BrowserRouter>
@@ -63,7 +63,7 @@ function App() {
               )
             }
           </div>
-          <AsideBar userSignIn={userSignIn} />
+          <AsideBar userSignIn={userSignIn} setSignInUp={setSignInUp} setUserSignInUP={setUserSignInUP} />
         </main>
       </div>
     </BrowserRouter>
