@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './Login.css'
 
 const initialState = {
-  email: '',
-  password: '',
+  inputEmail: '',
+  inputPassword: '',
 }
 
 function Login({users, setUserSignInUP, setSignInUp }) {
@@ -21,7 +21,7 @@ function Login({users, setUserSignInUP, setSignInUp }) {
   
   const handleClick = (event) => {
     event.preventDefault()
-    checkLoginUser(formLogin.email, formLogin.password);
+    checkLoginUser(formLogin.inputEmail, formLogin.inputPassword);
   }
 
   const checkLoginUser = (userEmail, userPassword) => {
@@ -29,7 +29,9 @@ function Login({users, setUserSignInUP, setSignInUp }) {
       if(user.email === userEmail && user.password === userPassword ) {
         return user;
       }
-    })
+      return null;
+    });
+    console.log(isSignUp)
 
     if(isSignUp) {
       setUserSignInUP(isSignUp);
@@ -51,10 +53,10 @@ function Login({users, setUserSignInUP, setSignInUp }) {
       <form className='login-form' action="">
         <div className='login-inputs'>
           <label htmlFor="">Email:</label>
-          <input onChange={handleChange} name='email' value={formLogin.email} type="email" required />
+          <input onChange={handleChange} name='inputEmail' value={formLogin.email} type="email" required />
 
           <label htmlFor="">Password:</label>
-          <input onChange={handleChange} name='password' password={formLogin.password} type="password" required />
+          <input onChange={handleChange} name='inputPassword' password={formLogin.password} type="password" required />
         </div>
 
         <button onClick={handleClick} type='submit'>Login</button>
