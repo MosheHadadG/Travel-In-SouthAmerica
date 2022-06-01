@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { myContext } from '../../context/myContext';
+
 
 import './Login.css'
 
@@ -8,10 +10,12 @@ const initialState = {
   inputPassword: '',
 }
 
-function Login({users, setUserSignInUP, setSignInUp }) {
+
+function Login() {
   const [ formLogin , setFormLogin ] = useState(initialState);
   const [ wrongMsg, setWrongMsg ] = useState(false)
-  
+  // Global State
+  const {setSignIn, setUserSignIn, users} = useContext(myContext);
 
   const handleChange = (event) => {
     let value = event.target.value;
@@ -34,8 +38,8 @@ function Login({users, setUserSignInUP, setSignInUp }) {
     console.log(isSignUp)
 
     if(isSignUp) {
-      setUserSignInUP(isSignUp);
-      setSignInUp(true);
+      setUserSignIn(isSignUp)
+      setSignIn(true);
     }
     else{
       setWrongMsg(true)
@@ -56,7 +60,7 @@ function Login({users, setUserSignInUP, setSignInUp }) {
           <input onChange={handleChange} name='inputEmail' value={formLogin.email} type="email" required />
 
           <label htmlFor="">Password:</label>
-          <input onChange={handleChange} name='inputPassword' password={formLogin.password} type="password" required />
+          <input onChange={handleChange} name='inputPassword' autoComplete="true" password={formLogin.password} type="password" required />
         </div>
 
         <button onClick={handleClick} type='submit'>Login</button>

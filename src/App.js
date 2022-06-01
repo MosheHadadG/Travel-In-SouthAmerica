@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { BrowserRouter, Route } from "react-router-dom";
 
 import NavBar from './components/NavBar/NavBar'
@@ -10,33 +10,20 @@ import PlanningTripPage from './screens/Planning_Trip_Page/PlanningTripPage'
 import ProfilePage from './screens/Profile_Page/ProfilePage'
 import Register from './screens/Register_Page/Register';
 import { getUsers } from './Apis/MockApi/requestsUsers'
-
-
 import './App.css'
+import { myContext } from './context/myContext';
 
 function App() {
-  const [ signIn, setSignIn ] = useState(false);
-  const [ users, setUsers ] = useState([]);
-  const [ userSignIn, setUserSignIn ] = useState({});
-
-  const setSignInUp  = (newState) =>{
-    setSignIn(newState);
-  }
-  const setUserSignInUP  = (newState) =>{
-    setUserSignIn(newState);
-  }
+ // Global State
+  const state = useContext(myContext); 
 
   useEffect(() => {
     const updateUsers = async () => {
       const updetedUsers = await getUsers();
-      setUsers(updetedUsers);
+      state.setUsers(updetedUsers);
     }
     updateUsers();
   }, [])
-  useEffect(()=> {
-    console.log(signIn, userSignIn)
-
-  },[signIn, userSignIn]) 
 
   return (
     <BrowserRouter>
@@ -44,11 +31,9 @@ function App() {
         <NavBar />
         <main>
           <div className='main-container'>
-            {!signIn ? 
+            {!state.signIn ? 
             ( <>
-            <Route exact path="/"
-             render={(props) => <Login {...props} users={users} 
-             setUserSignInUP= {setUserSignInUP} setSignInUp={setSignInUp} />} /> 
+            <Route exact path="/" component={Login} /> 
              <Route exact path='/signup' component={Register} />
              </>) :
               (
@@ -63,11 +48,11 @@ function App() {
               )
             }
           </div>
-          <AsideBar userSignIn={userSignIn} setSignInUp={setSignInUp} setUserSignInUP={setUserSignInUP} />
+          <AsideBar/>
         </main>
       </div>
     </BrowserRouter>
   )
 }
 
-export default App
+export default App;

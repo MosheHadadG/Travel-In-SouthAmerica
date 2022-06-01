@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { myContext } from '../../context/myContext';
 import ProfileImgCircle from '../../ResusbleUi/profileImgCircle/profileImgCircle'
 import './AsideBar.css'
 
-function AsideBar({ userSignIn, setSignInUp,  setUserSignInUP  }) {
+function AsideBar() {
+  // Global State
+  const {setSignIn, setUserSignIn, userSignIn} = useContext(myContext); 
 
   const handleLogout = () => {
-    setSignInUp(false);
-    setUserSignInUP({});
+    setSignIn(false);
+    setUserSignIn({});
   }
 
   return (
@@ -23,7 +26,7 @@ function AsideBar({ userSignIn, setSignInUp,  setUserSignInUP  }) {
               <Link to={`/profile/${userSignIn.id}`}><i className="fa-solid fa-user"></i> <li>My Profile</li></Link>
               <ProfileImgCircle srcImg={userSignIn.avatar} />
               <h3>{`Welcome ${userSignIn.firstName} ${userSignIn.lastname}`}</h3>
-              <Link onClick={handleLogout} to="/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</Link>
+              <Link onClick={handleLogout} to="/"><i className="fa-solid fa-arrow-right-from-bracket"></i> Logout</Link>
             </>
           }
 
