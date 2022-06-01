@@ -17,8 +17,13 @@ function Weather() {
   return (
     <div className='weather-container'>
       <div className='weather-box'>
-         <h2>{randomCountry}</h2>
-         <h4>33C</h4>
+        <div className='temp-countryName'>
+          <h2>{randomCountry}</h2>
+          <h4>33°</h4>
+        </div>
+        <div className='weather-icon'>
+        <i class="fa-solid fa-sun fa-2xl"></i>
+        </div>
       </div>
 
 
