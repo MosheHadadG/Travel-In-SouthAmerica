@@ -1,0 +1,28 @@
+.weather-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-container .weather-box {
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #3cc0fe 20%, #0066ff);
+}
+
+.weather-box h2 {
+  text-align: right;
+  padding: 0 30px;
+  color: white;
+  font-weight: 300;
+  font-size: 2.3em;
+  height: 10%;
+}
+.weather-box h4 {
+  text-align: right;
+  padding: 0 35px;
+  color: white;
+  font-weight: 300;
+  font-size: 2.2em;
+}

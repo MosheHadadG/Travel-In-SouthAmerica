@@ -1,0 +1,75 @@
+.attraction-main {
+  width: 100%;
+  height: 100%;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}
+
+.attraction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: black;
+}
+
+.attraction-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+
+}
+
+.attraction-imgBox {
+  width: 60%;
+  height: 100%;
+}
+
+.attraction-imgBox img{
+  width: 100%;
+  height: 100%;
+}
+
+.attraction-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+.attraction-info {
+  width: 60%;
+}
+.attraction-description {
+  width: 100%;
+}
+
+.attraction-description p{
+  font-size: 1.1rem;
+}
+
+.attraction-buttons {
+  margin-top: 100px;
+
+}
+
+.attraction-buttons button {
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-style: none;
+}
+.attraction-buttons button:hover {
+  background: linear-gradient(to right, #9e3d34, #e43a15);
+}
+
+
+
+

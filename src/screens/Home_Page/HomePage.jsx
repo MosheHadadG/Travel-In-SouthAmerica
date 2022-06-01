@@ -1,11 +1,19 @@
-import React from 'react'
 import Weather from '../../components/Weather/Weather'
+import Destionations from '../../components/Destionations/Destionations'
+import Attractions from '../../components/Attractions/Attractions'
+
+
+import './HomePage.css'
+
 
 function HomePage() {
+
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className='home-page-container'>
+
       <Weather />
+      <Destionations />
+      <Attractions />
 
     </div>
   )
