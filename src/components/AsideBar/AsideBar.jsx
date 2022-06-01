@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { myContext } from '../../context/myContext';
 import ProfileImgCircle from '../../ResusbleUi/profileImgCircle/profileImgCircle'
 import './AsideBar.css'
@@ -17,13 +17,13 @@ function AsideBar() {
     <aside className='adise-bar'>
       <nav className='aside-nav'>
         <ul className='aside-ul'>
-          <Link to="/"><i className="fa-solid fa-house-chimney"></i> Home Page </Link>
-          <Link to="/partners"><i className="fa-solid fa-handshake"></i> <li>Partners</li></Link>
-          <Link to="/planning"><i className="fa-solid fa-plane"></i> <li>Planning Trip</li></Link>
-          
+        <NavLink exact activeClassName="active" to='/' ><i className="fa-solid fa-house-chimney"></i> Home Page</NavLink>
+        <NavLink exact activeClassName="active" to='/partners' ><i className="fa-solid fa-handshake"></i> <li>Partners</li></NavLink>
+        <NavLink exact activeClassName="active" to='/planning' ><i className="fa-solid fa-plane"></i> <li>Planning Trip</li></NavLink>
+  
           {Object.keys(userSignIn).length > 0 &&
             <>
-              <Link to={`/profile/${userSignIn.id}`}><i className="fa-solid fa-user"></i> <li>My Profile</li></Link>
+              <NavLink exact activeClassName="active" to={`/profile/${userSignIn.id}`} ><i className="fa-solid fa-user"></i> <li>My Profile</li></NavLink>
               <ProfileImgCircle srcImg={userSignIn.avatar} />
               <h3>{`Welcome ${userSignIn.firstName} ${userSignIn.lastname}`}</h3>
               <Link onClick={handleLogout} to="/"><i className="fa-solid fa-arrow-right-from-bracket"></i> Logout</Link>

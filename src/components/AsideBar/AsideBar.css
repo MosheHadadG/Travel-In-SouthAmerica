@@ -48,3 +48,8 @@
   display: flex;
   gap: 2%;
 }
+
+.active{
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4 !important;
+}
