@@ -41,6 +41,7 @@ function App() {
     updateUsers();
     updateDestionation();
     updateAttractions()
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
