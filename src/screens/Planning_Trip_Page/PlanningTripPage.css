@@ -7,6 +7,17 @@
   width: 100%;
 }
 
+.planning-instructions{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 36%;
+}
+.planning-trip-page-container h4 {
+  margin: 0;
+
+}
+
 .planning-boards {
   display: flex;
   justify-content: space-around;

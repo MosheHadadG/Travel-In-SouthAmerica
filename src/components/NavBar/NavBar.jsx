@@ -6,10 +6,7 @@ function NavBar() {
     <div className="header">
     <div className="header-navbar">
       <div className="logo">
-        <h1>
-          <span className="black">T</span>
-          ravel <span className="black">I</span>n <span className="black">S</span>outh<span className="black">A</span>merica
-        </h1>
+        <h1>Travel In SouthAmerica</h1>
       </div>
     </div>
     </div>
