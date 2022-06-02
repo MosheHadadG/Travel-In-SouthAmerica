@@ -25,6 +25,7 @@ function CountriesBox({ handleClickedCountry }) {
 
   return (
     <div  className='countries-box'>
+      <h4>Arrange the countries on your route</h4>
       <div className='list-countries'>
         {renderedCountries}
 

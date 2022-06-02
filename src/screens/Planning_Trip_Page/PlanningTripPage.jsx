@@ -22,8 +22,8 @@ function PlanningTripPage() {
 
       <h1>Planning Trip</h1>
       <div className='planning-instructions'>
-      <h4>Arrange the countries on your route</h4>
-      <h4>You can remove a country by clicking on the country circle</h4>
+      {/* <h4>Arrange the countries on your route</h4>
+      <h4>You can remove a country by clicking on the country circle</h4> */}
       </div>
       <div className='planning-boards'>
         <CountriesBox handleClickedCountry={handleClickedCountry} />

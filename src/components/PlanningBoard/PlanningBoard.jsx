@@ -23,13 +23,15 @@ function PlanningBoard({ countriesPlan, handleRemovedCountryPlan }) {
     );
   })
   return (
-
+   
     <div className='planning-board'>
+      <h4>You can remove a country by clicking on the country circle</h4>
       <div className='countries-in-plan'>
         <h3>Start <i className="fa-solid fa-plane"></i></h3>
         {renderedCountriesInPlan}
         <h3>End <i className="fa-solid fa-house"></i></h3>
       </div>
+      
     </div>
   )
 }
