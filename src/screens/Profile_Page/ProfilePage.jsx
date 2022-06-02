@@ -3,6 +3,7 @@ import { myContext } from '../../context/myContext';
 import { Link } from 'react-router-dom';
 
 import ProfileImgCircle from '../../ResusbleUi/profileImgCircle/profileImgCircle';
+import TextBox from '../../components/TextBox/TextBox';
 import './ProfilePage.css'
 
 function Profile_Page(props) {
@@ -30,13 +31,9 @@ function Profile_Page(props) {
           </div>
         </div>
         <div className='profile-bottom'>
-          <div className='profile-about'>
-            <h2>About:</h2>
-            <p>{profile.about}</p>
-          </div>
-          <div className='profile-interests'>
-            <p>{profile.interests}</p>
-          </div>
+          <TextBox title='About:' text={profile.about} />
+          <TextBox title='Interests:' text={profile.about} />
+          <TextBox title='Planning:' text='There is no plan yet...' />
         </div>
         <div className="profile-buttons">
           <Link to={`/partners`}><button>Back</button></Link>
