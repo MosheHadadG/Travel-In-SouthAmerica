@@ -1,0 +1,45 @@
+.card-partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 300px; 
+  border: 2px solid #e65245;
+  border-radius: 10px;
+}
+
+.card-partner-profile {
+  height: 40%;
+}
+
+.card-partner-name {
+  height: 10%;
+}
+
+.card-partner-buttons {
+  height: 30%;
+  margin-bottom: 5px;
+}
+
+.card-partner-about {
+  font-size: 0.8rem;
+}
+
+
+.card-partner button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4;
+  font-size: 1rem;
+  cursor: pointer;
+  border-style: none;
+  padding: 10px;
+}
+
+.card-partner button:hover {
+  background: linear-gradient(to right, #9e3d34, #e43a15);
+}
+

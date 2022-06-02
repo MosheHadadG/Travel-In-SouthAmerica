@@ -22,7 +22,7 @@ function Weather() {
           <h4>33°</h4>
         </div>
         <div className='weather-icon'>
-        <i class="fa-solid fa-sun fa-2xl"></i>
+        <i className="fa-solid fa-sun fa-2xl"></i>
         </div>
       </div>
 
