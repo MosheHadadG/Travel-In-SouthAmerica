@@ -1,0 +1,85 @@
+.profile-page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-box {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Profile Top - image&name */
+.profile-top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image-box {
+  width: 23%;
+  height: 30%;
+}
+.profile-image-box img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.profile-name h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.profile-age-city h5 {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Profile Bottom */
+.profile-bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-about {
+  width: 65%;
+  border: 3px solid #e65245;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.profile-about p {
+  padding-left: 30px;
+}
+
+
+.profile-buttons button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-style: none;
+}
+.profile-buttons button:hover {
+  background: linear-gradient(to right, #9e3d34, #e43a15);
+}
+
+
