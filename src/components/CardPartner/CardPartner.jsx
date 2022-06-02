@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ProfileImgCircle from '../../ResusbleUi/profileImgCircle/profileImgCircle'
+import ProfileImgCircle from '../profileImgCircle/profileImgCircle'
 
 import './CardPartner.css'
 function CardPartners({id, srcImg, firstName,lastName, age, city, about}) {

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { myContext } from '../../context/myContext';
-import ProfileImgCircle from '../../ResusbleUi/profileImgCircle/profileImgCircle'
+import ProfileImgCircle from '../profileImgCircle/profileImgCircle'
 import './AsideBar.css'
 
 function AsideBar() {

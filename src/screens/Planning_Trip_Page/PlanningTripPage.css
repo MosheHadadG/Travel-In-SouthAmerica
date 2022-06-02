@@ -1,0 +1,19 @@
+.planning-trip-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.planning-boards {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.list-countries {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}

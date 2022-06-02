@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { myContext } from '../../context/myContext';
 import { Link } from 'react-router-dom';
 
-import ProfileImgCircle from '../../ResusbleUi/profileImgCircle/profileImgCircle';
+import ProfileImgCircle from '../../components/profileImgCircle/profileImgCircle';
 import TextBox from '../../components/TextBox/TextBox';
 import './ProfilePage.css'
 
@@ -33,7 +33,8 @@ function Profile_Page(props) {
         <div className='profile-bottom'>
           <TextBox title='About:' text={profile.about} />
           <TextBox title='Interests:' text={profile.about} />
-          <TextBox title='Planning:' text='There is no plan yet...' />
+          <TextBox title='Planning:'
+           text='No planning yet...' />
         </div>
         <div className="profile-buttons">
           <Link to={`/partners`}><button>Back</button></Link>
@@ -41,7 +42,6 @@ function Profile_Page(props) {
       </div>
     );
   }
-
 
   return (
     <div className="profile-page-container">

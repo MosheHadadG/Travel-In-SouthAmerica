@@ -1,0 +1,35 @@
+.countries-box {
+  width: 30%;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+.list-countries {
+  width: 100%;
+  height: 100%;
+}
+
+.list-country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-country button {
+  width: 60%;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-style: none;
+}
+.list-country button:hover {
+  background: linear-gradient(to right, #9e3d34, #e43a15);
+}
+
+

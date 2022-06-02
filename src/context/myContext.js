@@ -25,7 +25,7 @@ function ContextProvider({ children }) {
     spinner,
     setSpinner,
     countriesSouthAmerica:
-      ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Guyana", "Paraguay",
+      ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Mexico", "Paraguay",
         "Peru", "Suriname", "Uruguay", "Venezuela"]
   }
 
