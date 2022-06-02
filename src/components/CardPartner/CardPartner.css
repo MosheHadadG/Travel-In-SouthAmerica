@@ -9,6 +9,15 @@
   border-radius: 10px;
 }
 
+.card-partner:hover {
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4;
+}
+
+
+.button-see-profile {
+  background-color: blue;
+}
 .card-partner-profile {
   height: 40%;
 }
@@ -33,13 +42,17 @@
   border-radius: 10px;
   background: linear-gradient(to right, #e65245, #e43a15);
   color: #f4f4f4;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
   border-style: none;
   padding: 10px;
 }
 
+.card-partner:hover button{
+  background: black;
+  color: #f4f4f4;
+} 
 .card-partner button:hover {
-  background: linear-gradient(to right, #9e3d34, #e43a15);
+  background: #f4f4f4;
+  color: black;
 }
-

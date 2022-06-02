@@ -3,7 +3,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
+
+.partners-filters {
+  display: flex;
+  justify-content: center;
+  width: 100%
+
+
+}
+
+.partners-filters select {
+  width: 250px;
+  height: 40px;
+  /* color: #f4f4f4; */
+  font-size: 1.1rem;
+  border: 2px solid #e65245;
+}
+.partners-filters select:hover {
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4;
+}
+.partners-filters select * {
+  color: black;
+}
+
 .cards-partners {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
