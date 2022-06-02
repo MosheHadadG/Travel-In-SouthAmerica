@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import CountriesBox from '../../components/CountriesBox/CountriesBox'
 import PlanningBoard from '../../components/PlanningBoard/PlanningBoard';
 
