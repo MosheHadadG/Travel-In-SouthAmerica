@@ -45,11 +45,12 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if(state.destinations.length > 0 && state.attractions.length > 0) {
+    if(state.destinations.length > 0 && state.attractions.length > 0
+      && Object.keys(state.userSignIn).length > 0) {
       state.setSpinner(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.destinations, state.attractions])
+  }, [state.destinations, state.attractions, state.userSignIn])
 
   return (
     <BrowserRouter>
