@@ -34,7 +34,8 @@ function PlanningTripForm({addNewPlanningClick}) {
     <>
         <div className='planning-inputs'>
           <label htmlFor="">Budget &#x24;:</label>
-          <input onChange={handleChange} name='inputBudget' value={formPlanning.inputBudget} type="number"/>
+          <input onChange={handleChange} name='inputBudget' placeholder='Enter your budget for a trip'
+           value={formPlanning.inputBudget} type="number"/>
 
           <label htmlFor="">departure date:</label>
           <input onChange={handleChange} name='inputDeparture' password={formPlanning.inputDeparture} type="date"/>
