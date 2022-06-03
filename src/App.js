@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { myContext } from './context/myContext';
 
 import NavBar from './components/NavBar/NavBar'
+import Footer from './components/Footer/Footer';
 import AsideBar from './components/AsideBar/AsideBar'
 import Login from './screens/Login_Page/Login';
 import HomePage from './screens/Home_Page/HomePage';
@@ -78,6 +79,7 @@ function App() {
           </div>
           <AsideBar />
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   )
