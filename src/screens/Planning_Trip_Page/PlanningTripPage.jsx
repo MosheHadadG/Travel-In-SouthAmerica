@@ -41,7 +41,7 @@ function PlanningTripPage() {
       const usersWithoutUserChange = users.filter((user) => userSignIn.id !== user.id);
       const updateUserDB = async () => {
         await updateUser(userSignIn.id, userSignIn);
-        setUsers([...usersWithoutUserChange, userSignIn]);
+        setUsers([userSignIn, ...usersWithoutUserChange]);
       }
       updateUserDB();
     }
