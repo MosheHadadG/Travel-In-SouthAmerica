@@ -8,7 +8,7 @@ import { updateUser } from '../../Apis/MockApi/requestsUsers'
 import './PlanningTripPage.css'
 function PlanningTripPage() {
   const [countriesPlan, setCountriesPlan] = useState([]);
-  const { userSignIn, setUserSignIn } = useContext(myContext);
+  const { userSignIn, setUserSignIn, users, setUsers } = useContext(myContext);
   const [firstRender, setFirstRender] = useState(false);
 
   const handleClickedCountry = (countryName) => {
@@ -23,6 +23,7 @@ function PlanningTripPage() {
 
   const updateUserPlanning = (formPlanning) => {
     if (!formPlanning) return;
+    if(countriesPlan.length <= 0) return;
     const { inputBudget, inputDeparture, inputReturn } = formPlanning;
     const updatedUserSignIn = { ...userSignIn };
     updatedUserSignIn.planning = {
@@ -37,8 +38,10 @@ function PlanningTripPage() {
   useEffect(() => {
     if (!firstRender) setFirstRender(true);
     if (firstRender) {
+      const usersWithoutUserChange = users.filter((user) => userSignIn.id !== user.id);
       const updateUserDB = async () => {
-        await updateUser(userSignIn.id, userSignIn)
+        await updateUser(userSignIn.id, userSignIn);
+        setUsers([...usersWithoutUserChange, userSignIn]);
       }
       updateUserDB();
     }
