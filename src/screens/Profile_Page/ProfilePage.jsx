@@ -15,6 +15,24 @@ function Profile_Page(props) {
     return profile;
   }
 
+  const profilePlanningText = ({ planning }) => {
+    const { departureDate, returnDate, budget, countriesPlan } = planning;
+
+    return (
+      <>
+        <div className='date-budget-left-side'>
+          <h4>{`Departue Date: ${departureDate}`}</h4>
+          <h4>{`Return Date: ${returnDate}`}</h4>
+          <h4>{`Budget: ${budget}$`}</h4>
+        </div>
+        <div className='countries-button-right-side'>
+          <h4>{`Start: ${countriesPlan[0]}`}</h4>
+          <h4>{`End: ${countriesPlan[countriesPlan.length - 1]}`}</h4>
+        </div>
+      </>
+    );
+  }
+
   const renderdProfile = () => {
     const profile = findProfile();
     return (
@@ -34,7 +52,9 @@ function Profile_Page(props) {
           <TextBox title='About:' text={profile.about} />
           <TextBox title='Interests:' text={profile.about} />
           <TextBox title='Planning:'
-           text='No planning yet...' />
+            text={Object.keys(profile.planning).length > 0 ? 
+              (profilePlanningText(profile)) : ('There is no planning yet')
+            } />
         </div>
         <div className="profile-buttons">
           <Link to={`/partners`}><button>Back</button></Link>

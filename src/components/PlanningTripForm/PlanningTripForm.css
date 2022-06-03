@@ -1,0 +1,31 @@
+.planning-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.planning-inputs label {
+  font-size: 1.3rem;
+}
+
+.planning-inputs input {
+  width: 280px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.planning-form button {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #e65245, #e43a15);
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-style: none;
+}
+
+.planning-form button:hover {
+  background: linear-gradient(to right, #9e3d34, #e43a15);
+}

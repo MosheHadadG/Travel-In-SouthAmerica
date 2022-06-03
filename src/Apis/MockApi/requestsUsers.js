@@ -19,7 +19,7 @@ export const deleteUser = async (id) => {
 }
 
 export const updateUser = async (id, updatedProfile) => {
-  await axios.put(`${baseURL}/shoes/${id}`, updatedProfile);
+  await axios.put(`${baseURL}/users/${id}`, updatedProfile);
 }
 
 export const createUser = async (newUser) => {
