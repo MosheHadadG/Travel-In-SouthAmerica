@@ -1,44 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+
+
 .weather-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.weather-container .weather-box {
+.widget {
   width: 400px;
   height: 200px;
-  border-radius: 20px;
-  background: linear-gradient(to right, #e65245, #e43a15); 
   display: flex;
-  gap: 10%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.temp-countryName {
-  width: 50%;
+.weatherIcon{
+  background: linear-gradient(to right, #e65245, #e43a15); 
   height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.weather-box h2 {
-  text-align: right;
-  padding: 0 30px;
-  color: white;
-  font-weight: 300;
-  font-size: 2.3em;
-  height: 10%;
-}
-.weather-box h4 {
-  text-align: right;
-  padding: 0 35px;
-  color: white;
-  font-weight: 300;
-  font-size: 2.2em;
+.weatherIcon:after{
+  content:"\f002";
+  color: #f4f4f4;
+  font-family: weathericons; 
+  font-size: 110px;
+  transform: translate(10px, 16px);
 }
 
-.weather-icon {
+.weatherInfo {
+  background-color: #2e3336;
+  height: 30%;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+}
+
+
+.temperature {
+  color: #c5cdcf;
+  font-family: 'Open Sans';
+  font-weight: 200;
+  font-size: 2.9375em;
+  margin: 0;
+  padding: 0 10px;
+}
+
+
+.city {
+  color: #c5cdcf;
+  font-family: 'Open Sans';
+  font-weight: 200;
+  font-size: 1.1875em;
+  line-height: 1.1875em;
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
-  font-size: 4rem;
-  color: #f9d71c;
-  width: 50%;
-  height: 100%;
 }

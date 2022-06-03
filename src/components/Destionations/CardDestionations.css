@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  gap: 5px;
 }
 
 .card {
@@ -49,7 +50,7 @@
   width: 60%;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(to right, #e65245, #e43a15);
+  background: #2e3336;
   color: #f4f4f4;
   font-size: 1rem;
   cursor: pointer;
@@ -57,5 +58,5 @@
 }
 
 .card .button-see-more:hover {
-  background: linear-gradient(to right, #9e3d34, #e43a15);
+  background: linear-gradient(to right, #e65245, #e43a15);
 }

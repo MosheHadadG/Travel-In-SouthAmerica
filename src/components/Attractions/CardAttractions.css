@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  gap: 5px;
 }
 
 .card {
@@ -13,9 +14,9 @@
   border-radius: 10px;
   padding: 10px;
   border: 2px solid transparent;
+  transition: 0.5s;
 }
 .card:hover {
-  /* border: 2px solid gray; */
   border: 2px solid #e65245;
 }
 .card-img {
@@ -31,7 +32,6 @@
 
 .card-name  {
   font-size: 0.6rem;
- 
   height: 30%;
 }
 
@@ -39,7 +39,7 @@
   width: 60%;
   height: 60px;
   border-radius: 10px;
-  background: linear-gradient(to right, #e65245, #e43a15);
+  background: #2e3336;
   color: #f4f4f4;
   font-size: 1rem;
   cursor: pointer;
@@ -47,7 +47,8 @@
 }
 
 .card button:hover {
-  background: linear-gradient(to right, #9e3d34, #e43a15);
+  /* background: linear-gradient(to right, #9e3d34, #e43a15); */
+  background: linear-gradient(to right, #e65245, #e43a15);
 }
 
 

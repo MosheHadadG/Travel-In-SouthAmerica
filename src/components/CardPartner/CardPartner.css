@@ -15,9 +15,6 @@
 }
 
 
-.button-see-profile {
-  background-color: blue;
-}
 .card-partner-profile {
   height: 40%;
 }
@@ -49,7 +46,7 @@
 }
 
 .card-partner:hover button{
-  background: black;
+  background: #2e3336;
   color: #f4f4f4;
 } 
 .card-partner button:hover {
