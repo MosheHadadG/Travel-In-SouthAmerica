@@ -58,13 +58,11 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (state.destinations.length > 0 && state.attractions.length > 0
-      && Object.keys(state.users).length > 0
-      && Object.keys(state.userSignIn).length > 0) {
+    if (state.destinations.length > 0 && state.attractions.length > 0) {
       state.setSpinner(false);
     }
     // eslint-disable-next-line
-  }, [state.destinations, state.attractions, state.users, state.userSignIn])
+  }, [state.destinations, state.attractions])
 
 
   let signInLocalStorage = localStorage.getItem('signIn')
