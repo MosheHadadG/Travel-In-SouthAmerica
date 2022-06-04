@@ -32,7 +32,6 @@ function Login() {
   const checkLoginUser = (userEmail, userPassword) => {
     
     const isSignUp = users.find((user) => {
-      console.log(user.email,userEmail, user.password, userPassword)
       if(user.email.toLowerCase() === userEmail.toLowerCase() && user.password === userPassword ) {
         return user;
       }

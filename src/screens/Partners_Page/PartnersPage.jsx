@@ -2,13 +2,14 @@ import React, { useState, useContext, useEffect } from 'react'
 import CardPartner from '../../components/CardPartner/CardPartner'
 import { myContext } from '../../context/myContext';
 import SelectBoxAge from '../../components/SelectsBoxPartners/SelectBoxAge';
+import CheckBox from '../../components/SelectsBoxPartners/CheckBox';
 import './PartnersPage.css'
 
 function PartnersPage() {
   // Global state
   const state = useContext(myContext)
   const [usersFiltered, setUsersFiltered] = useState(state.users)
-  const [term, setTerm] = useState({ age: '' })
+  const [term, setTerm] = useState({ age: '', onlyPartnerWithPlan: '' })
 
   const renderedCards = usersFiltered.map((user) => {
     if (user.id !== state.userSignIn.id) {
@@ -28,7 +29,11 @@ function PartnersPage() {
     return null
   })
 
-  const filteredPartners = () => {
+  const handleChangeTerm = ({ value, name }) => {
+    setTerm({ ...term, [name]: value });
+  }
+
+  const filterByAge = () => {
     if (!term.age || term.age === 'All') {
       setUsersFiltered(state.users)
     }
@@ -43,12 +48,23 @@ function PartnersPage() {
     }
   }
 
-  const handleChangeTerm = ({ value, name }) => {
-    setTerm({ ...term, [name]: value });
+  const filterPartnerWithPlan = () => {
+    if(term.onlyPartnerWithPlan) {
+      const filterd = usersFiltered.filter((user) => {
+        return  Object.keys(user.planning).length > 0
+      })
+      setUsersFiltered(filterd)
+    }
   }
 
+  const filteredPartners = () => {
+    filterByAge();
+    filterPartnerWithPlan();
+  }
+
+
   useEffect(() => {
-    filteredPartners()
+    filteredPartners();
     // eslint-disable-next-line
   }, [term])
 
@@ -57,6 +73,7 @@ function PartnersPage() {
       <h1>Partners</h1>
       <div className='partners-filters'>
         <SelectBoxAge handleChangeTerm={handleChangeTerm} />
+        <CheckBox handleChangeTerm={handleChangeTerm} />
       </div>
       <div className='cards-partners'>
         {renderedCards}

@@ -11,6 +11,7 @@ function SelectBoxAge({handleChangeTerm}) {
 
   }
   return (
+    <div className='filter-partner-by-age'>
     <select name='age' onChange={(event) => handleChangeTerm(handleChange(event))}>
       <option value={'All'}>Choose Age:</option>
       <option value="18-25">18-25</option>
@@ -20,6 +21,8 @@ function SelectBoxAge({handleChangeTerm}) {
       <option value="56-65">56-65</option>
       <option value="65-80">65-80</option>
     </select>
+    </div>
+    
   )
 }
 

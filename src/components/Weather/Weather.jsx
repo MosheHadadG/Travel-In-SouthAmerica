@@ -17,13 +17,13 @@ function Weather() {
   return (
 
     <div className='weather-container'>
-      <article class="widget">
-        <div class="weatherIcon"></div>
-        <div class="weatherInfo">
-          <h1 class="temperature">25&deg;</h1>
-          <h2 class="city">Tirana, {randomCountry}</h2>
+      <div className="widget">
+        <div className="weatherIcon"></div>
+        <div className="weatherInfo">
+          <h1 className="temperature">25&deg;</h1>
+          <h2 className="city">Tirana, {randomCountry}</h2>
         </div>
-      </article>
+      </div>
     </div>
 
   )

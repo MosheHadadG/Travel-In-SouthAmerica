@@ -43,11 +43,15 @@
   cursor: pointer;
   border-style: none;
   padding: 10px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 1.1875em;
+  line-height: 1.1875em;
 }
 
 .card-partner:hover button{
   background: #2e3336;
-  color: #f4f4f4;
+  color: #c5cdcf;;
 } 
 .card-partner button:hover {
   background: #f4f4f4;

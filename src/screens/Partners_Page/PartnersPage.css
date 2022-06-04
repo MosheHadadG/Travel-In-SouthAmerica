@@ -10,9 +10,9 @@
 .partners-filters {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
   width: 100%
-
-
 }
 
 .partners-filters select {
