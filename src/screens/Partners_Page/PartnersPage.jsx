@@ -4,6 +4,7 @@ import { myContext } from '../../context/myContext';
 import SelectBoxAge from '../../components/SelectsBoxPartners/SelectBoxAge';
 import CheckBox from '../../components/SelectsBoxPartners/CheckBox';
 import './PartnersPage.css'
+import Spinner from '../../components/Spinner/Spinner';
 
 function PartnersPage() {
   // Global state
@@ -49,9 +50,9 @@ function PartnersPage() {
   }
 
   const filterPartnerWithPlan = () => {
-    if(term.onlyPartnerWithPlan) {
+    if (term.onlyPartnerWithPlan) {
       const filterd = usersFiltered.filter((user) => {
-        return  Object.keys(user.planning).length > 0
+        return Object.keys(user.planning).length > 0
       })
       setUsersFiltered(filterd)
     }
@@ -64,20 +65,28 @@ function PartnersPage() {
 
 
   useEffect(() => {
-    filteredPartners();
+    if(Object.keys(state.users).length > 0) {
+      filteredPartners();
+    }
     // eslint-disable-next-line
-  }, [term])
-
+  }, [state.users, term])
+ 
   return (
+
     <div className='partners-page-container'>
       <h1>Partners</h1>
       <div className='partners-filters'>
         <SelectBoxAge handleChangeTerm={handleChangeTerm} />
         <CheckBox handleChangeTerm={handleChangeTerm} />
       </div>
-      <div className='cards-partners'>
-        {renderedCards}
-      </div>
+      { !Object.keys(state.users).length > 0  ? ( <Spinner /> ) :
+        (
+          <>
+            <div className='cards-partners'>
+              {renderedCards}
+            </div>
+          </>
+        )}
     </div>
   )
 }

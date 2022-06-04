@@ -28,51 +28,67 @@ function App() {
   useEffect(() => {
     const updateUsers = async () => {
       const updetedUsers = await getUsers();
+      localStorage.setItem('users', JSON.stringify(updetedUsers));
       state.setUsers(updetedUsers);
     }
+
     const updateDestionation = async () => {
       const updatedDestionation = await getDestinations();
+      localStorage.setItem('destinations', JSON.stringify(updatedDestionation))
       state.setDestinations(updatedDestionation)
+
+
     }
+
     const updateAttractions = async () => {
       const updatedDestionation = await getAttractions();
+      localStorage.setItem('attractions', JSON.stringify(updatedDestionation))
       state.setAttractions(updatedDestionation)
+
     }
-    
+
     updateUsers();
     updateDestionation();
     updateAttractions()
-     // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // Local Storage User
+    const userSignInLocalStorage = localStorage.getItem('userSignIn')
+    if (userSignInLocalStorage) state.setUserSignIn(JSON.parse(userSignInLocalStorage));
+    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
-    if(state.destinations.length > 0 && state.attractions.length > 0
+    if (state.destinations.length > 0 && state.attractions.length > 0
+      && Object.keys(state.users).length > 0
       && Object.keys(state.userSignIn).length > 0) {
       state.setSpinner(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.destinations, state.attractions, state.userSignIn])
+    // eslint-disable-next-line
+  }, [state.destinations, state.attractions, state.users, state.userSignIn])
 
+
+  let signInLocalStorage = localStorage.getItem('signIn')
   return (
     <BrowserRouter>
       <div>
         <NavBar />
         <main>
           <div className='main-container'>
-            {!state.signIn ?
+            {!state.signIn && !JSON.parse(signInLocalStorage) ?
               (<>
                 <Route exact path="/" component={Login} />
                 <Route exact path='/signup' component={Register} />
               </>) :
               (
                 <>
-                
+
                   <Route exact path='/' component={HomePage} />
                   <Route exact path='/partners' component={PartnersPage} />
                   <Route exact path='/planning' component={PlanningTripPage} />
                   <Route exact path='/profile/:id' component={ProfilePage} />
                   <Route exact path='/destionation/:id' component={Destionation_Page} />
                   <Route exact path='/attraction/:id' component={Attraction_Page} />
+                  
                 </>
               )
             }

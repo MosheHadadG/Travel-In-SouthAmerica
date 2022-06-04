@@ -31,23 +31,25 @@ function Login() {
 
   const checkLoginUser = (userEmail, userPassword) => {
     
-    const isSignUp = users.find((user) => {
+    const isSignIn = users.find((user) => {
       if(user.email.toLowerCase() === userEmail.toLowerCase() && user.password === userPassword ) {
         return user;
       }
       return null;
     });
-    console.log(isSignUp)
+    
+    localStorage.setItem('userSignIn', JSON.stringify(isSignIn))
 
-    if(isSignUp) {
-      setUserSignIn(isSignUp)
-      setSignIn(true);
-    }
+    if(isSignIn) {
+        setUserSignIn(isSignIn)
+        setSignIn(true);
+        localStorage.setItem('signIn', true);
+      }
+    
     else{
       setWrongMsg(true)
     }
   }
-
 
   return (
     <div className='login-container'>

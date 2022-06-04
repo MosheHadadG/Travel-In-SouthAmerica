@@ -9,8 +9,10 @@ function AsideBar() {
   const {setSignIn, setUserSignIn, userSignIn} = useContext(myContext); 
 
   const handleLogout = () => {
+    localStorage.setItem('signIn', false)
     setSignIn(false);
     setUserSignIn({});
+    localStorage.removeItem('userSignIn')
   }
 
   return (
