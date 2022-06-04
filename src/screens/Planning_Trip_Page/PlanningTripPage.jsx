@@ -10,6 +10,7 @@ function PlanningTripPage() {
   const [countriesPlan, setCountriesPlan] = useState([]);
   const { userSignIn, setUserSignIn, users, setUsers } = useContext(myContext);
   const [firstRender, setFirstRender] = useState(false);
+  
 
   const handleClickedCountry = (countryName) => {
     if (countriesPlan.includes(countryName)) return;
@@ -33,11 +34,12 @@ function PlanningTripPage() {
       returnDate: inputReturn
     }
     setUserSignIn(updatedUserSignIn);
+    localStorage.setItem('userSignIn', JSON.stringify(updatedUserSignIn))
   }
-
+  
   useEffect(() => {
     if (!firstRender) setFirstRender(true);
-    if (firstRender) {
+    if (firstRender && Object.keys(userSignIn.planning).length > 0 ) {
       const usersWithoutUserChange = users.filter((user) => userSignIn.id !== user.id);
       const updateUserDB = async () => {
         await updateUser(userSignIn.id, userSignIn);
@@ -49,10 +51,13 @@ function PlanningTripPage() {
   }, [userSignIn])
 
 
+  const userSignInLocalStorage = localStorage.getItem('userSignIn');
+  const userSignInLocalData = JSON.parse(userSignInLocalStorage);
 
   return (
+  
     <div className='planning-trip-page-container'>
-      {Object.keys(userSignIn.planning).length > 0 ? 
+    {Object.keys(userSignInLocalData.planning).length > 0 ? 
       // Component for a edit plan page.
       (<div>You Have a Plan</div>) :
         (
@@ -68,7 +73,8 @@ function PlanningTripPage() {
             </div>
           </>
         )
-   }
+  }
+   
     </div>
   )
 }

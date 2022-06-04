@@ -63,7 +63,7 @@ function App() {
     }
     // eslint-disable-next-line
   }, [state.destinations, state.attractions])
-
+ 
 
   let signInLocalStorage = localStorage.getItem('signIn')
   return (
