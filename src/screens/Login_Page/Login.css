@@ -28,7 +28,12 @@
   height: 30px;
   border-radius: 10px;
   font-size: 1.3rem;
-  padding: 5px;
+  padding: 10px;
+}
+
+.login-inputs input:focus {
+  outline: none; 
+  border: 2px solid #e65245;
 }
 
 .login-form button {

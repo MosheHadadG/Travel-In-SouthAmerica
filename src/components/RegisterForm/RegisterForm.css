@@ -21,6 +21,11 @@
   font-size: 1.3rem;
 }
 
+.register-inputs input:focus {
+  outline: none; 
+  border: 2px solid #e65245;
+}
+
 
 .register-inputs select {
   padding: 20px;

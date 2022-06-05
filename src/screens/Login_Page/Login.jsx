@@ -60,11 +60,12 @@ function Login() {
 
       <form className='login-form' action="">
         <div className='login-inputs'>
-          <label htmlFor="">Email:</label>
-          <input onChange={handleChange} name='inputEmail' value={formLogin.email} type="email" required />
 
-          <label htmlFor="">Password:</label>
-          <input onChange={handleChange} name='inputPassword' autoComplete="true" password={formLogin.password} type="password" required />
+          <input onChange={handleChange} placeholder="Email"
+           name='inputEmail' value={formLogin.email} type="email" required />
+
+          <input onChange={handleChange} placeholder="Password"
+           name='inputPassword' autoComplete="true" password={formLogin.password} type="password" required />
         </div>
 
         <button onClick={handleClick} type='submit'>Login</button>
