@@ -55,10 +55,10 @@ function Profile_Page(props) {
         </div>
         <div className='profile-bottom'>
           <TextBox title='About:' text={profile.about} />
-          <TextBox title='Interests:' text={profile.about} />
+          <TextBox title='Interests:' text="There is no interests yet..." />
           <TextBox title='Planning:'
             text={Object.keys(profile.planning).length > 0 ? 
-              (profilePlanningText(profile)) : ('There is no planning yet')
+              (profilePlanningText(profile)) : ('There is no planning yet...')
             } />
         </div>
         <div className="profile-buttons">
