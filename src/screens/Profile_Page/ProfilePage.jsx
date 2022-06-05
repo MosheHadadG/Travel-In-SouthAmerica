@@ -8,7 +8,7 @@ import Spinner from '../../components/Spinner/Spinner';
 import './ProfilePage.css'
 
 function Profile_Page(props) {
-  const { users } = useContext(myContext)
+  const { users, userSignIn } = useContext(myContext)
   
   const findProfile = () => {
     const profileID = props.match.params.id;
@@ -40,6 +40,9 @@ function Profile_Page(props) {
     return (
       <div className='profile-box'>
         <div className='profile-top'>
+        {profile.id === userSignIn.id && <div className='profile-edit-button'>
+          <button><i className="fa-solid fa-pen-to-square"></i> Edit Profile</button>
+          </div>}
           <div className='profile-image-box'>
             <ProfileImgCircle srcImg={profile.avatar} />
           </div>

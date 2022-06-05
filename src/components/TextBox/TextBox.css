@@ -5,10 +5,12 @@
   border-radius: 10px;
 }
 
-.text-box p {
+.text-box article .content {
   padding-left: 30px;
+  padding-bottom: 20px;
   font-size: 1.1rem;
   display: flex;
   justify-content: space-around;
+
   
 }
