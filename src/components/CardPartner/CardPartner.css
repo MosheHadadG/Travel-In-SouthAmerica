@@ -16,7 +16,14 @@
 
 
 .card-partner-profile {
-  height: 40%;
+  width: 50%;
+  height: 36%;
+}
+
+.card-partner-profile img {
+  width: 100%;
+  height: 100%;
+  object-position: top;
 }
 
 .card-partner-name {

@@ -45,13 +45,15 @@
   background: linear-gradient(to right, #9e3d34, #e43a15);
 }
 
+
 .profile-image-box {
-  width: 23%;
-  height: 30%;
+  width: 25%;
+
 }
 .profile-image-box img {
   width: 100%;
-  object-fit: contain;
+  height: 250px;
+  object-position: top;
 }
 
 .profile-name h3 {

@@ -26,7 +26,9 @@ function AsideBar() {
           {Object.keys(userSignIn).length > 0 &&
             <>
               <NavLink exact activeClassName="active" to={`/profile/${userSignIn.id}`} ><i className="fa-solid fa-user"></i> <li>My Profile</li></NavLink>
+              <div className='aside-profile-img'>
               <ProfileImgCircle srcImg={userSignIn.avatar} />
+              </div>
               <h3>{`Welcome ${userSignIn.firstName} ${userSignIn.lastname}`}</h3>
               <Link onClick={handleLogout} to="/"><i className="fa-solid fa-arrow-right-from-bracket"></i> Logout</Link>
             </>
