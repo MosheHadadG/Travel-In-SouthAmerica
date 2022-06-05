@@ -27,7 +27,8 @@
   width: 280px;
   height: 30px;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  padding: 5px;
 }
 
 .login-form button {

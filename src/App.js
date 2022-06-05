@@ -10,7 +10,7 @@ import HomePage from './screens/Home_Page/HomePage';
 import PartnersPage from './screens/Partners_Page/PartnersPage'
 import PlanningTripPage from './screens/Planning_Trip_Page/PlanningTripPage'
 import ProfilePage from './screens/Profile_Page/ProfilePage'
-import Register from './screens/Register_Page/Register';
+import RegisterPage from './screens/Register_Page/RegisterPage';
 import Destionation_Page from './screens/Destionation_Page/Destionation_Page';
 import Attraction_Page from './screens/Attraction_Page/Attraction_Page';
 
@@ -72,7 +72,7 @@ function App() {
             {!state.signIn && !JSON.parse(signInLocalStorage) ?
               (<>
                 <Route exact path="/" component={Login} />
-                <Route exact path='/signup' component={Register} />
+                <Route exact path='/signup' component={RegisterPage} />
               </>) :
               (
                 <>
