@@ -1,15 +1,21 @@
 import React, { useState, useContext, useEffect } from 'react'
+import { myContext } from '../../context/myContext';
+import { updateUser } from '../../Apis/MockApi/requestsUsers'
+
 import CountriesBox from '../../components/CountriesBox/CountriesBox'
 import PlanningBoard from '../../components/PlanningBoard/PlanningBoard';
 import PlanningTripForm from '../../components/PlanningTripForm/PlanningTripForm';
-import { myContext } from '../../context/myContext';
-import { updateUser } from '../../Apis/MockApi/requestsUsers'
+
 
 import './PlanningTripPage.css'
 function PlanningTripPage() {
   const [countriesPlan, setCountriesPlan] = useState([]);
   const { userSignIn, setUserSignIn, users, setUsers } = useContext(myContext);
-  const [firstRender, setFirstRender] = useState(false);
+  const [isUpdateUser, setIsUpdateUser] = useState(false);
+
+// Local Storage
+  const userSignInLocalStorage = localStorage.getItem('userSignIn');
+  const userSignInLocalData = JSON.parse(userSignInLocalStorage);
   
 
   const handleClickedCountry = (countryName) => {
@@ -33,13 +39,13 @@ function PlanningTripPage() {
       departureDate: inputDeparture,
       returnDate: inputReturn
     }
+    setIsUpdateUser(true);
     setUserSignIn(updatedUserSignIn);
     localStorage.setItem('userSignIn', JSON.stringify(updatedUserSignIn))
   }
   
   useEffect(() => {
-    if (!firstRender) setFirstRender(true);
-    if (firstRender && Object.keys(userSignIn.planning).length > 0 ) {
+    if (isUpdateUser) {
       const usersWithoutUserChange = users.filter((user) => userSignIn.id !== user.id);
       const updateUserDB = async () => {
         await updateUser(userSignIn.id, userSignIn);
@@ -48,11 +54,9 @@ function PlanningTripPage() {
       updateUserDB();
     }
     // eslint-disable-next-line
-  }, [userSignIn])
+  }, [isUpdateUser])
 
 
-  const userSignInLocalStorage = localStorage.getItem('userSignIn');
-  const userSignInLocalData = JSON.parse(userSignInLocalStorage);
 
   return (
   

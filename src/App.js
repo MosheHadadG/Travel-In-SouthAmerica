@@ -28,21 +28,17 @@ function App() {
   useEffect(() => {
     const updateUsers = async () => {
       const updetedUsers = await getUsers();
-      localStorage.setItem('users', JSON.stringify(updetedUsers));
       state.setUsers(updetedUsers);
     }
 
     const updateDestionation = async () => {
       const updatedDestionation = await getDestinations();
-      localStorage.setItem('destinations', JSON.stringify(updatedDestionation))
       state.setDestinations(updatedDestionation)
-
 
     }
 
     const updateAttractions = async () => {
       const updatedDestionation = await getAttractions();
-      localStorage.setItem('attractions', JSON.stringify(updatedDestionation))
       state.setAttractions(updatedDestionation)
 
     }
@@ -65,7 +61,8 @@ function App() {
   }, [state.destinations, state.attractions])
  
 
-  let signInLocalStorage = localStorage.getItem('signIn')
+  const signInLocalStorage = localStorage.getItem('signIn')
+
   return (
     <BrowserRouter>
       <div>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { myContext } from '../../context/myContext';
 import { Link } from 'react-router-dom';
-
+import { myContext } from '../../context/myContext';
+import Spinner from '../../components/Spinner/Spinner';
 import './Attraction_Page.css'
 
 function Attraction_Page(props) {
@@ -42,7 +42,7 @@ function Attraction_Page(props) {
 
     return (
       <div className="attraction-main">
-        {renderdAttraction()}
+        {!Object.keys(attractions).length > 0 ? (<Spinner />) : (renderdAttraction())}
       </div>
     )
   

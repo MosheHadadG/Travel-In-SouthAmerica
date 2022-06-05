@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { myContext } from '../../context/myContext';
 import { Link } from 'react-router-dom';
-
+import { myContext } from '../../context/myContext';
+import Spinner from '../../components/Spinner/Spinner';
 import './Destionation_Page.css'
 
 function Destionation_Page(props) {
@@ -38,11 +38,10 @@ function Destionation_Page(props) {
         </div>
       );
     }
-  
 
     return (
       <div className="destination-main">
-        {renderdDestionation()}
+        {!Object.keys(destinations).length > 0 ? (<Spinner />) : (renderdDestionation())}
       </div>
     )
   

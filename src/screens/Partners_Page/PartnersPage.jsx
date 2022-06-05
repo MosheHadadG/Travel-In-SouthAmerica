@@ -1,10 +1,12 @@
 import React, { useState, useContext, useEffect } from 'react'
-import CardPartner from '../../components/CardPartner/CardPartner'
 import { myContext } from '../../context/myContext';
+
+import CardPartner from '../../components/CardPartner/CardPartner'
 import SelectBoxAge from '../../components/SelectsBoxPartners/SelectBoxAge';
 import CheckBox from '../../components/SelectsBoxPartners/CheckBox';
-import './PartnersPage.css'
 import Spinner from '../../components/Spinner/Spinner';
+
+import './PartnersPage.css'
 
 function PartnersPage() {
   // Global state

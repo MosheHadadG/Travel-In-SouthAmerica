@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 
 import ProfileImgCircle from '../../components/profileImgCircle/profileImgCircle';
 import TextBox from '../../components/TextBox/TextBox';
+import Spinner from '../../components/Spinner/Spinner';
 import './ProfilePage.css'
 
 function Profile_Page(props) {
   const { users } = useContext(myContext)
-
+  
   const findProfile = () => {
     const profileID = props.match.params.id;
     const profile = users.find((user) => user.id === profileID)
@@ -32,6 +33,7 @@ function Profile_Page(props) {
       </>
     );
   }
+
 
   const renderdProfile = () => {
     const profile = findProfile();
@@ -65,7 +67,7 @@ function Profile_Page(props) {
 
   return (
     <div className="profile-page-container">
-      {renderdProfile()}
+      {!Object.keys(users).length > 0 ? (<Spinner />) : (renderdProfile())}
     </div>
   )
 
