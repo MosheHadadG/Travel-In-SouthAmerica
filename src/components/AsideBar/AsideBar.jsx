@@ -6,13 +6,17 @@ import './AsideBar.css'
 
 function AsideBar() {
   // Global State
-  const {setSignIn, setUserSignIn, userSignIn} = useContext(myContext); 
+  const {setUserSignIn, userSignIn} = useContext(myContext); 
+
 
   const handleLogout = () => {
     localStorage.setItem('signIn', false)
-    setSignIn(false);
+    // setSignIn(false);
     setUserSignIn({});
     localStorage.removeItem('userSignIn')
+    
+    
+
   }
 
   return (

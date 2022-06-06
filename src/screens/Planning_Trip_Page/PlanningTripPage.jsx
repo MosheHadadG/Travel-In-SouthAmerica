@@ -77,8 +77,7 @@ function PlanningTripPage() {
             </div>
           </>
         )
-  }
-   
+  } 
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './RegisterForm.css'
 const initialState = {
   firstName: '',
-  lastName: '',
+  lastname: '',
   email: '',
   password: '',
   gender: '',
@@ -12,12 +12,10 @@ const initialState = {
   urlAvatar: ''
 }
 
-function RegisterForm({createNewUser}) {
+function RegisterForm({ createNewUser }) {
   const [formRegister, setRegisterForm] = useState(initialState)
 
-  const handleChange = (event) => {
-    let value = event.target.value;
-    let nameInput = event.target.name;
+  const handleChange = ({ target: { name: nameInput, value } }) => {
     setRegisterForm({ ...formRegister, [nameInput]: value })
   }
 
@@ -31,7 +29,7 @@ function RegisterForm({createNewUser}) {
 
   return (
 
-    <form className='register-form' action="">
+    <form className='register-form'>
       <div className='register-inputs'>
 
         <div className='register-first-last-name'>
@@ -39,7 +37,7 @@ function RegisterForm({createNewUser}) {
             name='firstName' value={formRegister.firstName} type="text" />
 
           <input onChange={handleChange} placeholder="Last Name"
-            name='lastName' value={formRegister.lastName} type="text" />
+            name='lastname' value={formRegister.lastName} type="text" />
         </div>
 
         <div className='register-email'>

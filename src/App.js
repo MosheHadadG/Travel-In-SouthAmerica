@@ -69,7 +69,7 @@ function App() {
         <NavBar />
         <main>
           <div className='main-container'>
-            {!state.signIn && !JSON.parse(signInLocalStorage) ?
+            {!JSON.parse(signInLocalStorage) ?
               (<>
                 <Route exact path="/" component={Login} />
                 <Route exact path='/signup' component={RegisterPage} />

@@ -1,11 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { myContext } from '../../context/myContext';
-
 import CardPartner from '../../components/CardPartner/CardPartner'
 import SelectBoxAge from '../../components/SelectsBoxPartners/SelectBoxAge';
 import CheckBox from '../../components/SelectsBoxPartners/CheckBox';
 import Spinner from '../../components/Spinner/Spinner';
-
 import './PartnersPage.css'
 
 function PartnersPage() {
@@ -67,12 +65,12 @@ function PartnersPage() {
 
 
   useEffect(() => {
-    if(Object.keys(state.users).length > 0) {
+    if (Object.keys(state.users).length > 0) {
       filteredPartners();
     }
     // eslint-disable-next-line
   }, [state.users, term])
- 
+
   return (
 
     <div className='partners-page-container'>
@@ -81,13 +79,11 @@ function PartnersPage() {
         <SelectBoxAge handleChangeTerm={handleChangeTerm} />
         <CheckBox handleChangeTerm={handleChangeTerm} />
       </div>
-      { !Object.keys(state.users).length > 0  ? ( <Spinner /> ) :
+      {!Object.keys(state.users).length > 0 ? (<Spinner />) :
         (
-          <>
-            <div className='cards-partners'>
-              {renderedCards}
-            </div>
-          </>
+          <div className='cards-partners'>
+            {renderedCards}
+          </div>
         )}
     </div>
   )

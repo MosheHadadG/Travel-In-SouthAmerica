@@ -13,40 +13,39 @@ const initialState = {
 
 
 function Login() {
-  const [ formLogin , setFormLogin ] = useState(initialState);
-  const [ wrongMsg, setWrongMsg ] = useState(false)
+  const [formLogin, setFormLogin] = useState(initialState);
+  const [wrongMsg, setWrongMsg] = useState(false)
   // Global State
-  const {setSignIn, setUserSignIn, users} = useContext(myContext);
+  const { setSignIn, setUserSignIn, users } = useContext(myContext);
 
-  const handleChange = (event) => {
-    let value = event.target.value;
-    let nameInput = event.target.name;
-    setFormLogin({...formLogin, [nameInput]: value})
+  const handleChange = ({ target: { name: nameInput, value } }) => {
+    setFormLogin({ ...formLogin, [nameInput]: value })
+
   }
-  
+
   const handleClick = (event) => {
     event.preventDefault()
     checkLoginUser(formLogin.inputEmail, formLogin.inputPassword);
   }
 
   const checkLoginUser = (userEmail, userPassword) => {
-    
+
     const isSignIn = users.find((user) => {
-      if(user.email.toLowerCase() === userEmail.toLowerCase() && user.password === userPassword ) {
+      if (user.email.toLowerCase() === userEmail.toLowerCase() && user.password === userPassword) {
         return user;
       }
       return null;
     });
-    
+
     localStorage.setItem('userSignIn', JSON.stringify(isSignIn))
 
-    if(isSignIn) {
-        setUserSignIn(isSignIn)
-        setSignIn(true);
-        localStorage.setItem('signIn', true);
-      }
-    
-    else{
+    if (isSignIn) {
+      setUserSignIn(isSignIn)
+      setSignIn(true);
+      localStorage.setItem('signIn', true);
+    }
+
+    else {
       setWrongMsg(true)
     }
   }
@@ -62,18 +61,18 @@ function Login() {
         <div className='login-inputs'>
 
           <input onChange={handleChange} placeholder="Email"
-           name='inputEmail' value={formLogin.email} type="email" required />
+            name='inputEmail' value={formLogin.email} type="email" required />
 
           <input onChange={handleChange} placeholder="Password"
-           name='inputPassword' autoComplete="true" password={formLogin.password} type="password" required />
+            name='inputPassword' autoComplete="true" password={formLogin.password} type="password" required />
         </div>
 
         <button onClick={handleClick} type='submit'>Login</button>
       </form>
       <div className='login-bottom'>
-        {wrongMsg && <h2 style={{color: 'red'}}>Email or Password is incorrect</h2>}
+        {wrongMsg && <h2 style={{ color: 'red' }}>Email or Password is incorrect</h2>}
         <h3>Don't have an account yet? <Link to="/signup">Sign Up</Link></h3>
-  
+
       </div>
     </div>
   )

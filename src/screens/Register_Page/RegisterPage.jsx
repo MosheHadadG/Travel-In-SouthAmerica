@@ -1,28 +1,23 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { createUser, getUsers } from '../../Apis/MockApi/requestsUsers'
-import { myContext  } from '../../context/myContext'
+import { myContext } from '../../context/myContext'
 import RegisterForm from '../../components/RegisterForm/RegisterForm'
 
 import './RegisterPage.css'
 
-function Register({history}) {
+function Register({ history }) {
   // Global State
   const state = useContext(myContext);
 
   const createNewUser = async (user) => {
+    delete user.id
     const newUser = {
+      ...user,
       createdAt: new Date(),
-      firstName: user.firstName,
-      lastname: user.lastName,
-      gender: user.gender,
-      email: user.email,
-      password: user.password,
       avatar: user.urlAvatar,
       about: '',
       interests: [],
       planning: {},
-      age: user.age,
-      city: user.city
     }
 
     await createUser(newUser);
