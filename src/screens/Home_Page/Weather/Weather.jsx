@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 // import getWeather from '../../Apis/WeatherApi/requestWeather'
-import { myContext } from '../../context/myContext';
+import { myContext } from '../../../context/myContext';
 import './Weather.css'
 
 function Weather() {

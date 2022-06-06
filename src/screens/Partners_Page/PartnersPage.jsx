@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { myContext } from '../../context/myContext';
-import CardPartner from '../../components/CardPartner/CardPartner'
-import SelectBoxAge from '../../components/SelectsBoxPartners/SelectBoxAge';
-import CheckBox from '../../components/SelectsBoxPartners/CheckBox';
+import CardPartner from './CardPartner/CardPartner'
+import SelectBoxAge from './SelectsBoxPartners/SelectBoxAge';
+import CheckBox from './SelectsBoxPartners/CheckBox';
 import Spinner from '../../components/Spinner/Spinner';
 import './PartnersPage.css'
 

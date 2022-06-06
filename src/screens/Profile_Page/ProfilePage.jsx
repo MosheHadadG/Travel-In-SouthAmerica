@@ -9,26 +9,27 @@ import './ProfilePage.css'
 
 function Profile_Page(props) {
   const { users, userSignIn } = useContext(myContext)
-  
+
   const findProfile = () => {
     const profileID = props.match.params.id;
     const profile = users.find((user) => user.id === profileID)
     return profile;
   }
 
-  const profilePlanningText = ({ planning }) => {
-    const { departureDate, returnDate, budget, countriesPlan } = planning;
+  const profilePlanningText = (profile) => {
+    const { departureDate, returnDate, budget, countriesPlan } = profile.planning;
 
     return (
       <>
         <div className='date-budget-left-side'>
-          <h4>{`Departue Date: ${departureDate}`}</h4>
-          <h4>{`Return Date: ${returnDate}`}</h4>
-          <h4>{`Budget: ${budget}$`}</h4>
+          <h4>Departue Date: <span className='orangeColor'>{departureDate}</span></h4>
+          <h4>Return Date: <span className='orangeColor'>{returnDate}</span></h4>
+          <h4>Budget: <span className='orangeColor'>{budget}$</span></h4>
         </div>
         <div className='countries-button-right-side'>
-          <h4>{`Start: ${countriesPlan[0]}`}</h4>
-          <h4>{`End: ${countriesPlan[countriesPlan.length - 1]}`}</h4>
+          <h4>Start: <span className='orangeColor'>{countriesPlan[0]}</span></h4>
+          <h4>End: <span className='orangeColor'>{countriesPlan[countriesPlan.length - 1]}</span></h4>
+          <Link to={`/planning/${profile.id}`}><button>Trip Page</button></Link>
         </div>
       </>
     );
@@ -40,8 +41,10 @@ function Profile_Page(props) {
     return (
       <div className='profile-box'>
         <div className='profile-top'>
-        {profile.id === userSignIn.id && <div className='profile-edit-button'>
-          <button><i className="fa-solid fa-pen-to-square"></i> Edit Profile</button>
+          {profile.id === userSignIn.id && <div className='profile-edit-button'>
+            <Link to={`/profile/edit/${userSignIn.id}`}>
+              <button><i className="fa-solid fa-pen-to-square"></i> Edit Profile</button>
+            </Link>
           </div>}
           <div className='profile-image-box'>
             <ProfileImgCircle srcImg={profile.avatar} />
@@ -57,7 +60,7 @@ function Profile_Page(props) {
           <TextBox title='About:' text={profile.about} />
           <TextBox title='Interests:' text="There is no interests yet..." />
           <TextBox title='Planning:'
-            text={Object.keys(profile.planning).length > 0 ? 
+            text={Object.keys(profile.planning).length > 0 ?
               (profilePlanningText(profile)) : ('There is no planning yet...')
             } />
         </div>

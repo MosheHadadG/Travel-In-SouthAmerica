@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { createUser, getUsers } from '../../Apis/MockApi/requestsUsers'
 import { myContext } from '../../context/myContext'
-import RegisterForm from '../../components/RegisterForm/RegisterForm'
+import RegisterForm from './RegisterForm/RegisterForm'
 
 import './RegisterPage.css'
 

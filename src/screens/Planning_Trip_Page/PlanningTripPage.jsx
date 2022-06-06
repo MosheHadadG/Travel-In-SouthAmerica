@@ -5,10 +5,11 @@ import { updateUser } from '../../Apis/MockApi/requestsUsers'
 import CountriesBox from '../../components/CountriesBox/CountriesBox'
 import PlanningBoard from '../../components/PlanningBoard/PlanningBoard';
 import PlanningTripForm from '../../components/PlanningTripForm/PlanningTripForm';
+import Spinner from '../../components/Spinner/Spinner'
 
 
 import './PlanningTripPage.css'
-function PlanningTripPage() {
+function PlanningTripPage({history}) {
   const [countriesPlan, setCountriesPlan] = useState([]);
   const { userSignIn, setUserSignIn, users, setUsers } = useContext(myContext);
   const [isUpdateUser, setIsUpdateUser] = useState(false);
@@ -56,14 +57,18 @@ function PlanningTripPage() {
     // eslint-disable-next-line
   }, [isUpdateUser])
 
-
+  useEffect(()=> {
+    if(Object.keys(userSignInLocalData.planning).length > 0) {
+      history.push(`/planning/${userSignIn.id}`)
+    }
+    // eslint-disable-next-line
+  }, [])
 
   return (
   
     <div className='planning-trip-page-container'>
     {Object.keys(userSignInLocalData.planning).length > 0 ? 
-      // Component for a edit plan page.
-      (<div>You Have a Plan</div>) :
+      (<Spinner />) :
         (
           <>
             <h1>Planning Trip</h1>

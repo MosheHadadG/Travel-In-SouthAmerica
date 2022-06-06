@@ -13,6 +13,8 @@ import ProfilePage from './screens/Profile_Page/ProfilePage'
 import RegisterPage from './screens/Register_Page/RegisterPage';
 import Destionation_Page from './screens/Destionation_Page/Destionation_Page';
 import Attraction_Page from './screens/Attraction_Page/Attraction_Page';
+import EditProfilePage from './screens/Edit_Profile_Page/EditProfilePage';
+import TripPage from './screens/Trip_Page/TripPage';
 
 import { getUsers } from './Apis/MockApi/requestsUsers'
 import { getDestinations } from './Apis/MockApi/requestDestinations'
@@ -80,7 +82,9 @@ function App() {
                   <Route exact path='/' component={HomePage} />
                   <Route exact path='/partners' component={PartnersPage} />
                   <Route exact path='/planning' component={PlanningTripPage} />
+                  <Route exact path='/planning/:id' component={TripPage} />
                   <Route exact path='/profile/:id' component={ProfilePage} />
+                  <Route exact path='/profile/edit/:id' component={EditProfilePage} />
                   <Route exact path='/destionation/:id' component={Destionation_Page} />
                   <Route exact path='/attraction/:id' component={Attraction_Page} />
                   

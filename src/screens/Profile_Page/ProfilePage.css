@@ -91,7 +91,7 @@
 }
 
 
-.profile-buttons button {
+.profile-buttons button,.countries-button-right-side button {
   width: 100px;
   height: 40px;
   border-radius: 10px;
@@ -101,8 +101,14 @@
   cursor: pointer;
   border-style: none;
 }
-.profile-buttons button:hover {
+.profile-buttons button:hover, .countries-button-right-side button:hover {
   background: linear-gradient(to right, #9e3d34, #e43a15);
 }
+
+.orangeColor {
+  color: #e43a15;
+  font-size: 1.2rem;
+}
+
 
 

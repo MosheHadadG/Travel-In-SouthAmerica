@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ProfileImgCircle from '../profileImgCircle/profileImgCircle'
+import ProfileImgCircle from '../../../components/profileImgCircle/profileImgCircle'
 
 import './CardPartner.css'
 function CardPartners(

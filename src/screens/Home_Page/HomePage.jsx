@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { myContext } from '../../context/myContext'
 
-import Weather from '../../components/Weather/Weather'
-import Destionations from '../../components/Destionations/Destionations'
-import Attractions from '../../components/Attractions/Attractions'
+import Weather from './Weather/Weather'
+import Destionations from './Destionations/Destionations'
+import Attractions from './Attractions/Attractions'
 import Spinner from '../../components/Spinner/Spinner'
 
 import './HomePage.css'
