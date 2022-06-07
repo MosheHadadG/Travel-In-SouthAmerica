@@ -1,16 +1,29 @@
 import React, { useContext } from 'react'
 import { myContext } from '../../context/myContext'
+import { updateUser } from '../../Apis/MockApi/requestsUsers'
+import Spinner from '../../components/Spinner/Spinner'
 import './TripPage.css'
 
 
 function TripPage(props) {
-  const { users } = useContext(myContext)
+  const { users, setUsers, userSignIn, setUserSignIn } = useContext(myContext)
 
   const findProfile = () => {
     const profileID = props.match.params.id;
     const profile = users.find((user) => user.id === profileID)
     return profile;
   }
+
+  const handleDeleteTrip = async (userId) => {
+    const updatedUser = {...userSignIn, planning: []}
+    localStorage.setItem('userSignIn', JSON.stringify(updatedUser));
+    setUserSignIn(updatedUser);
+    const usersWithoutUserUpdated = users.filter((user) => user.id !== userId);
+    setUsers([...usersWithoutUserUpdated, updatedUser ])
+    props.history.push(`/planning`);
+    await updateUser(userId, updatedUser);
+  }
+
 
   const renderedPlanning = () => {
     const profile = findProfile();
@@ -44,6 +57,11 @@ function TripPage(props) {
           <h3>Return Date: <span className='orangeColor'>{returnDate}</span></h3>
           <h3>Budget: <span className='orangeColor'>{budget}$</span></h3>
         </div>
+        <div className='trip-buttons'>
+        {profile.id === userSignIn.id && <div className='trip-delete-button'>
+            <button onClick={() => handleDeleteTrip(profile.id)}><i className="fa-solid fa-trash"></i> Delete Trip</button>
+          </div>}
+        </div>
       </>
     )
   }
@@ -51,7 +69,7 @@ function TripPage(props) {
   return (
 
     <div className='trip-page-container'>
-      {renderedPlanning()}
+      {!Object.keys(users).length > 0 ? (<Spinner />) : (renderedPlanning())}
     </div>
 
 

@@ -90,6 +90,13 @@
   padding-left: 30px;
 }
 
+.profile-interests {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  font-weight: bold;
+}
+
 
 .profile-buttons button,.countries-button-right-side button {
   width: 100px;

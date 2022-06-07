@@ -9,11 +9,12 @@ function EditProfilePage({ history, location: { props } }) {
   const state = useContext(myContext);
 
 
-  const handleUpdateUser = async (updatedUser) => {
-    localStorage.setItem('userSignIn', JSON.stringify({ ...state.userSignIn, ...updatedUser }));
-    state.setUserSignIn({ ...state.userSignIn, ...updatedUser });
+  const handleUpdateUser = async (userUpdated) => {
+    const updatedUser = {...state.userSignIn, ...userUpdated}
+    localStorage.setItem('userSignIn', JSON.stringify(updatedUser));
+    state.setUserSignIn(updatedUser);
     const usersWithoutUserUpdated = state.users.filter((user) => user.id !== props.profile.id);
-    state.setUsers([...usersWithoutUserUpdated, { ...state.userSignIn, ...updatedUser } ])
+    state.setUsers([...usersWithoutUserUpdated, updatedUser ])
     await updateUser(props.profile.id, updatedUser);
     history.push(`/profile/${props.profile.id}`);
   }

@@ -62,3 +62,24 @@
 }
 
 
+.trip-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.trip-buttons button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #e65245, #e43a15);
+    color: #f4f4f4;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-style: none;
+  
+}
+
+.trip-buttons button:hover {
+  background: linear-gradient(to right, #9e3d34, #e43a15);
+}

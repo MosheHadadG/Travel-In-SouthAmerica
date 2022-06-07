@@ -35,16 +35,25 @@ function Profile_Page(props) {
     );
   }
 
+  const profileInterestsText = ({ interests }) => {
+    const interestsText = interests.map((interest) => <div key={interest}>{interest}</div>)
+    return (
+      <div className='profile-interests'>
+        {interestsText}
+      </div>
+
+    );
+  }
+
 
   const renderdProfile = () => {
     const profile = findProfile();
-    console.log(profile)
     return (
       <div className='profile-box'>
         <div className='profile-top'>
           {profile.id === userSignIn.id && <div className='profile-edit-button'>
             <Link to={{ pathname: `/profile/edit/${userSignIn.id}`, props: { profile } }}>
-            <button><i className="fa-solid fa-pen-to-square"></i> Edit Profile</button>
+              <button><i className="fa-solid fa-pen-to-square"></i> Edit Profile</button>
             </Link>
           </div>}
           <div className='profile-image-box'>
@@ -58,8 +67,11 @@ function Profile_Page(props) {
           </div>
         </div>
         <div className='profile-bottom'>
-          <TextBox title='About:' text={profile.about} />
-          <TextBox title='Interests:' text="There is no interests yet..." />
+          <TextBox title='About:' text={profile.about ?
+            (profile.about) : ("There is no about yet...")} />
+          <TextBox title='Interests:'
+            text={profile.interests.length > 0 ?
+              (profileInterestsText(profile)) : ("There is no interests yet...")} />
           <TextBox title='Planning:'
             text={Object.keys(profile.planning).length > 0 ?
               (profilePlanningText(profile)) : ('There is no planning yet...')
