@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { myContext } from '../../context/myContext'
+import { myContext } from '../../../context/myContext'
 import './CountriesBox.css'
 
 

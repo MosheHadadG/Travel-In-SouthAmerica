@@ -38,12 +38,13 @@ function Profile_Page(props) {
 
   const renderdProfile = () => {
     const profile = findProfile();
+    console.log(profile)
     return (
       <div className='profile-box'>
         <div className='profile-top'>
           {profile.id === userSignIn.id && <div className='profile-edit-button'>
-            <Link to={`/profile/edit/${userSignIn.id}`}>
-              <button><i className="fa-solid fa-pen-to-square"></i> Edit Profile</button>
+            <Link to={{ pathname: `/profile/edit/${userSignIn.id}`, props: { profile } }}>
+            <button><i className="fa-solid fa-pen-to-square"></i> Edit Profile</button>
             </Link>
           </div>}
           <div className='profile-image-box'>

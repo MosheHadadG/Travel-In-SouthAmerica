@@ -1,0 +1,64 @@
+.trip-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.trip-board {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.trip-page-planning-board {
+  width: 80%;
+  height: 350px;
+  border: 3px solid #e65245;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+
+}
+
+.trip-page-countries-in-plan {
+  display: grid;
+  grid-template-columns: repeat(6, 120px);
+  grid-gap: 2%;
+
+}
+
+.trip-page-countries-in-plan h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 10px;
+}
+
+.trip-page-country-in-plan {
+  width: 100%;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #e65245;
+  background: linear-gradient(to right, #e65245, #e43a15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f4f4f4;
+}
+
+.trip-page-country-in-plan span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.3rem;
+}
+
+

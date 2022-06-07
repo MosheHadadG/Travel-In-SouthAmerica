@@ -2,9 +2,9 @@ import React, { useState, useContext, useEffect } from 'react'
 import { myContext } from '../../context/myContext';
 import { updateUser } from '../../Apis/MockApi/requestsUsers'
 
-import CountriesBox from '../../components/CountriesBox/CountriesBox'
-import PlanningBoard from '../../components/PlanningBoard/PlanningBoard';
-import PlanningTripForm from '../../components/PlanningTripForm/PlanningTripForm';
+import CountriesBox from './CountriesBox/CountriesBox';
+import PlanningBoard from './PlanningBoard/PlanningBoard';
+import PlanningTripForm from './PlanningTripForm/PlanningTripForm';
 import Spinner from '../../components/Spinner/Spinner'
 
 
@@ -49,8 +49,9 @@ function PlanningTripPage({history}) {
     if (isUpdateUser) {
       const usersWithoutUserChange = users.filter((user) => userSignIn.id !== user.id);
       const updateUserDB = async () => {
-        await updateUser(userSignIn.id, userSignIn);
         setUsers([userSignIn, ...usersWithoutUserChange]);
+        await updateUser(userSignIn.id, userSignIn);
+        history.push(`/planning/${userSignIn.id}`)
       }
       updateUserDB();
     }
