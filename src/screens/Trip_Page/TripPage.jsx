@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import { myContext } from '../../context/myContext'
 import { updateUser } from '../../Apis/MockApi/requestsUsers'
 import Spinner from '../../components/Spinner/Spinner'
@@ -60,6 +61,9 @@ function TripPage(props) {
         <div className='trip-buttons'>
         {profile.id === userSignIn.id && <div className='trip-delete-button'>
             <button onClick={() => handleDeleteTrip(profile.id)}><i className="fa-solid fa-trash"></i> Delete Trip</button>
+          </div>}
+        {profile.id !== userSignIn.id && <div className='trip-back-profile-button'>
+           <Link to={`/profile/${profile.id}`}><button>{`Back to ${profile.firstName} profile`}</button></Link>
           </div>}
         </div>
       </>

@@ -99,12 +99,12 @@
 
 
 .profile-buttons button,.countries-button-right-side button {
-  width: 100px;
+  width: 120px;
   height: 40px;
   border-radius: 10px;
   background: linear-gradient(to right, #e65245, #e43a15);
   color: #f4f4f4;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   cursor: pointer;
   border-style: none;
 }
