@@ -76,8 +76,8 @@ function PartnersPage() {
     <div className='partners-page-container'>
       <h1>Partners</h1>
       <div className='partners-filters'>
-        <SelectBoxAge handleChangeTerm={handleChangeTerm} />
         <CheckBox handleChangeTerm={handleChangeTerm} />
+        <SelectBoxAge handleChangeTerm={handleChangeTerm} />
       </div>
       {!Object.keys(state.users).length > 0 ? (<Spinner />) :
         (

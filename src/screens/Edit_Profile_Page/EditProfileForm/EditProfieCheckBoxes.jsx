@@ -1,21 +1,25 @@
 import React, {useEffect, useState} from 'react'
 
+
 function EditProfieCheckBoxes({handleUpdateInterests}) {
-  const [interests, setInterests] = useState([])
+  const [interests, setInterests] = useState([]);
 
   const handleChecked = ({target:{name}}) => {
     if(interests.includes(name)) {
       const updatedInterests = interests.filter((interest) => interest !== name);
-      setInterests(updatedInterests)
+      setInterests(updatedInterests);
       return;
     };
-    setInterests([...interests, name])
+    setInterests([...interests, name]);
   }
 
   useEffect(()=>{
-    handleUpdateInterests(interests)
+    if (interests.length <= 0) return;
+    handleUpdateInterests(interests);
     // eslint-disable-next-line
   },[interests])
+
+
 
   return (
     <div className='edit-profile-interests'>
