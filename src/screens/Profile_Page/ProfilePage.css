@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
 }
 
 /* Profile Top - Edit&image&name */
@@ -72,6 +71,10 @@
   margin: 0;
 }
 
+.profile-email {
+  margin-top: 10px;
+}
+
 
 /* Profile Bottom */
 .profile-bottom {
@@ -121,4 +124,9 @@
 .orangeColor {
   color: #e43a15;
   font-size: 1.2rem;
+}
+
+
+.profile-buttons {
+  margin-top: 50px;
 }
