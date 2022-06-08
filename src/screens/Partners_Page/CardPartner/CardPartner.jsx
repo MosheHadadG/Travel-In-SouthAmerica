@@ -22,7 +22,7 @@ function CardPartners(
         <p>{`${about}...`}</p>
       </div>
       <div className='card-partner-buttons'>
-        <Link to={`/profile/${id}`}><button className='button-see-profile'><i class="fa-solid fa-address-card"></i></button></Link>
+        <Link to={`/profile/${id}`}><button className='button-see-profile'><i className="fa-solid fa-address-card"></i></button></Link>
       </div>
     </div>
   )

@@ -66,6 +66,9 @@ function Profile_Page(props) {
           <div className='profile-age-city'>
             <h5>{`${profile.age}, ${profile.city}`}</h5>
           </div>
+          <div className='profile-email'>
+            <h5><i className="fa-solid fa-envelope"></i> {profile.email}</h5>
+          </div>
         </div>
         <div className='profile-bottom'>
           <TextBox title='About:' text={profile.about ?

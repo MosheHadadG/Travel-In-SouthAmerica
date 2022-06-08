@@ -2,6 +2,10 @@
   .profile-box {
     width: 95%;
   }
+  .profile-edit-button {
+    transform: unset;
+  }
+
 }
 
 @media(max-width: 850px) {

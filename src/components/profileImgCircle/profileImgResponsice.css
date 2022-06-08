@@ -12,13 +12,13 @@
 }
 @media(min-width: 2224px) {
   .profile-img-circle {
-    width: 83%;
+    width: 74%;
   }
 }
 
 @media(min-width: 2530px) {
   .profile-img-circle {
-    width: 80%;
+    width: 66%;
   }
 }
 
