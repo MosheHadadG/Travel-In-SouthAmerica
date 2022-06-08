@@ -1,5 +1,6 @@
 import React from 'react'
 import './PlanningBoard.css'
+import './PlanningBoardResponsive.css'
 
 
 function PlanningBoard({ countriesPlan, handleRemovedCountryPlan }) {

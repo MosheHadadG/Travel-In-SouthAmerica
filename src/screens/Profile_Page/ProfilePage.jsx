@@ -6,6 +6,7 @@ import ProfileImgCircle from '../../components/profileImgCircle/profileImgCircle
 import TextBox from '../../components/TextBox/TextBox';
 import Spinner from '../../components/Spinner/Spinner';
 import './ProfilePage.css'
+import './ProfilePageResposive.css'
 
 function Profile_Page(props) {
   const { users, userSignIn } = useContext(myContext)

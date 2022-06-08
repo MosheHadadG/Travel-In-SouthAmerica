@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './CardAttractions.css'
 
 
+
 function CardAttractions({ attractions }) {
 
 

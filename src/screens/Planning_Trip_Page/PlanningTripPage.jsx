@@ -9,6 +9,7 @@ import Spinner from '../../components/Spinner/Spinner'
 
 
 import './PlanningTripPage.css'
+import './PlanningTripResponsive.css'
 function PlanningTripPage({history}) {
   const [countriesPlan, setCountriesPlan] = useState([]);
   const { userSignIn, setUserSignIn, users, setUsers } = useContext(myContext);

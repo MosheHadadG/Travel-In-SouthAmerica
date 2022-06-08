@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavBar.css"
+import "./NavBarResponsive.css"
 
 function NavBar() {
   return (

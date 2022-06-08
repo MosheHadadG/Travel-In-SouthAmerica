@@ -1,0 +1,53 @@
+@media(max-width: 1100px) {
+  .profile-box {
+    width: 95%;
+  }
+}
+
+@media(max-width: 850px) {
+  .profile-box {
+    width: 100%;
+  }
+  .profile-image-box {
+    width: 30%;
+  }
+  .text-box {
+    width: 90%;
+  }
+}
+
+@media(max-width: 730px) {
+  .profile-image-box {
+    width: 35%;
+  }
+}
+
+@media(max-width: 655px) {
+  .profile-edit-button button {
+    margin-bottom: 50px;
+    width: 170px;
+  }
+  .profile-image-box {
+    width: 40%;
+  }
+}
+
+@media(max-width: 550px) {
+  .profile-image-box {
+    width: 50%;
+  }
+  .text-box article .content {
+    padding-left: 62px;
+}
+  .countries-button-right-side button {
+    height: 55px;
+
+  }
+
+}
+
+@media(max-width: 475px) {
+  .profile-image-box {
+    width: 60%;
+  }
+}

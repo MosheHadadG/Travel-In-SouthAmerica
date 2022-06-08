@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './CardDestionations.css'
+import './DestionationsResponsive.css'
 
 function CardDestionations({ destinations }) {
 

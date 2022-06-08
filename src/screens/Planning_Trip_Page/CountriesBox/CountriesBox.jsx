@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { myContext } from '../../../context/myContext'
 import './CountriesBox.css'
+import './CountriesBoxResponsive.css'
 
 
 function CountriesBox({ handleClickedCountry }) {

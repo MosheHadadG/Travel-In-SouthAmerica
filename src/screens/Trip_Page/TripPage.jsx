@@ -4,6 +4,7 @@ import { myContext } from '../../context/myContext'
 import { updateUser } from '../../Apis/MockApi/requestsUsers'
 import Spinner from '../../components/Spinner/Spinner'
 import './TripPage.css'
+import './TripPageResponsive.css'
 
 
 function TripPage(props) {

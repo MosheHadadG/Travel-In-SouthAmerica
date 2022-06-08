@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { myContext } from '../../context/myContext';
 import ProfileImgCircle from '../profileImgCircle/profileImgCircle'
 import './AsideBar.css'
-
+import './AsideBarResponsive.css'
 function AsideBar() {
   // Global State
   const {setUserSignIn, userSignIn} = useContext(myContext); 
@@ -15,8 +15,7 @@ function AsideBar() {
     setUserSignIn({});
     localStorage.removeItem('userSignIn')
     
-    
-
+  
   }
 
   return (

@@ -1,0 +1,23 @@
+@media(max-width: 1160px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .card-name{
+    font-size: 0.5rem;
+  }
+
+  .card .button-see-more { 
+    width: 85%;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* .aside-ul a{
+    font-size: 0.7rem;
+    font-weight: bold;
+  } */
+}

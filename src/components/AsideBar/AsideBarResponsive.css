@@ -1,0 +1,60 @@
+@media(max-width: 1450px) {
+  .adise-bar {
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    flex-direction: row;
+    margin: 0;
+    
+  }
+  .aside-ul {
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .aside-ul a{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+  }
+  .aside-ul i{
+    font-size: 1.8rem;
+  }
+
+  .aside-profile-img {
+    height: 90%;
+    width: 40%;
+    margin-bottom: 5px;
+  }
+  .aside-profile-img img{
+    object-position: center;
+    
+  }
+  .aside-ul h3 {
+    display: none;
+  }
+}
+
+@media(max-width: 750px) {
+  .aside-profile-img {
+    height: 90%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 695px) {
+  .aside-ul a{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .aside-ul a{
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+}

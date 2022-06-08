@@ -1,0 +1,23 @@
+@media(max-width: 1200px) {
+  .cards-partners {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media(max-width: 925px) {
+  .cards-partners {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(max-width: 625px) {
+  .cards-partners {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 0.4%;
+  }
+  .partners-filters {
+    flex-direction: column;
+  }
+  .card-partner-about {
+    padding: 5px;
+  }
+}

@@ -5,6 +5,7 @@ import SelectBoxAge from './SelectsBoxPartners/SelectBoxAge';
 import CheckBox from './SelectsBoxPartners/CheckBox';
 import Spinner from '../../components/Spinner/Spinner';
 import './PartnersPage.css'
+import './PartnersResponsive.css'
 
 function PartnersPage() {
   // Global state

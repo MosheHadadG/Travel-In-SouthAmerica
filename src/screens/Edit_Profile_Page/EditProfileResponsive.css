@@ -1,0 +1,24 @@
+@media(max-width: 1450px) {
+  .edit-profile-box {
+    width: 100%;
+  }
+}
+
+@media(max-width: 900px) {
+  .edit-profile-about {
+    width: 90%;
+  }
+  .edit-profile-name, .edit-profile-age-city {
+    width: 80%;
+  }
+
+  .edit-profile-image-box {
+    width: 90%;
+  }
+  .edit-profile-interests {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+  }
+  
+}

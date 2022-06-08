@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
+import { myContext } from '../../context/myContext';
 import EditProfileForm from './EditProfileForm/EditProfileForm';
 import { updateUser } from '../../Apis/MockApi/requestsUsers';
 import './EditProfilePage.css'
-import { myContext } from '../../context/myContext';
+import './EditProfileResponsive.css'
+
 
 function EditProfilePage({ history, location: { props } }) {
   // Global State

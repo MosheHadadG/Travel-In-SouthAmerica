@@ -1,0 +1,57 @@
+@media(max-width: 1500px) {
+  .trip-page-countries-in-plan {
+    grid-template-columns: repeat(5, 120px);
+  }
+
+}
+
+@media(max-width: 870px) {
+  .trip-page-countries-in-plan {
+    grid-template-columns: repeat(4, 120px);
+  }
+
+}
+
+
+@media(max-width: 870px) {
+  .trip-page-countries-in-plan {
+    grid-template-columns: repeat(5, 100px);
+  }
+
+  .trip-page-countries-in-plan span {
+    font-size: 1.1rem;
+
+  }
+}
+
+@media(max-width: 760px) {
+  .trip-page-countries-in-plan {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
+
+
+@media(max-width: 600px) {
+  .trip-page-countries-in-plan {
+    grid-template-columns: repeat(4, 80px);
+  }
+  .trip-page-countries-in-plan span {
+    font-size: 0.8rem;
+  }
+
+  .trip-page-country-in-plan {
+    height: 60px;
+  }
+  .trip-page-countries-in-plan h3 {
+    font-size: 1.2rem;
+  } 
+}
+
+@media(max-width: 480px) {
+  .trip-page-countries-in-plan {
+    grid-template-columns: repeat(3, 80px);
+  }
+  .trip-buttons .trip-delete-button button {
+    width: 200px;
+  }
+}

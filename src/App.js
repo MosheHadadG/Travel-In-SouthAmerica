@@ -21,6 +21,7 @@ import { getDestinations } from './Apis/MockApi/requestDestinations'
 import { getAttractions } from './Apis/MockApi/requestAttractions'
 
 import './App.css'
+import './AppResponsive.css'
 
 
 function App() {
