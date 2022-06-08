@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 .header-navbar {
   background: linear-gradient(to right, #e65245, #e43a15); 
   /* background-color: #333; */
@@ -26,4 +27,9 @@
   color: #2e3336;
   font-size: 2.2rem;
   font-weight: bold;
+}
+
+.logoSmall {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
 }
