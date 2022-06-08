@@ -1,5 +1,7 @@
 @media(max-width: 500px) {
   .logo {
     justify-content: center;
+    width: 100%;
+    padding: 0;
   }
 }
