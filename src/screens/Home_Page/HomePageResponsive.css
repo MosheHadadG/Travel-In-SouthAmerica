@@ -1,0 +1,18 @@
+@media (max-width: 1450px) {
+  .home-page-container {
+    justify-content: center;
+    width: 100%;
+}
+}
+
+@media (max-width: 1450px) {
+  .widget {
+    width: 330px;
+}
+}
+
+@media (max-width: 500px) {
+  .widget {
+    width: 306px;
+}
+}

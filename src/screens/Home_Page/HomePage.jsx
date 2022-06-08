@@ -6,6 +6,7 @@ import Destionations from './Destionations/Destionations'
 import Attractions from './Attractions/Attractions'
 import Spinner from '../../components/Spinner/Spinner'
 import './HomePage.css'
+import './HomePageResponsive.css'
 
 
 function HomePage() {

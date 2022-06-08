@@ -9,9 +9,37 @@
     font-size: 0.5rem;
   }
 
-  .card button {
-    width: 100%;
-    height: 30px;
- 
+  .card .button-see-more { 
+    width: 50%;
+    font-size: 0.7rem;
   }
+}
+
+@media (max-width: 500px) {
+  /* .card {
+    width: 85%;
+  } */
+  .card {
+    width: 90%;
+    height: 100%;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .card-name {
+    font-size: 0.4rem;
+    height: 30%;
+    padding: 10px;
+  }
+
+  .card a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+  }
+
 }

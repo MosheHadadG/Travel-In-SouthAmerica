@@ -22,7 +22,6 @@
 
 .card:hover {
   border: 2px solid #e65245;
-  /* border: 2px solid #1c92d2;; */
 }
 
 .card-img {
@@ -55,6 +54,8 @@
 
 .card button:hover {
   background: linear-gradient(to right, #9e3d34, #e43a15);
+  /* background: linear-gradient(to right, #e65245, #e43a15); */
+  /* background: #5b86e5 */
 }
 
 
