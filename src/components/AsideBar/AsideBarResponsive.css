@@ -8,6 +8,8 @@
     width: 100%;
     flex-direction: row;
     margin: 0;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
   }
 
@@ -31,9 +33,7 @@
   }
 
   .aside-profile-img {
-    height: 90%;
-    width: 40%;
-    margin-bottom: 5px;
+    display: none;
   }
 
   .aside-profile-img img {
@@ -46,12 +46,7 @@
   }
 }
 
-@media(max-width: 750px) {
-  .aside-profile-img {
-    height: 90%;
-    width: 80%;
-  }
-}
+
 
 @media (max-width: 695px) {
   .aside-ul a {
