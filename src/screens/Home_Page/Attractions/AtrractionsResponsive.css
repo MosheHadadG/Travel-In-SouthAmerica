@@ -16,8 +16,7 @@
 }
 
 @media (max-width: 500px) {
-  /* .aside-ul a{
-    font-size: 0.7rem;
-    font-weight: bold;
-  } */
+  .card {
+    width: 85%;
+  }
 }

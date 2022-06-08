@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .profile-box {
   width: 80%;
   height: 100%;
@@ -25,6 +26,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .profile-edit-button {
   width: 100%;
   transform: translate(55px, 42px);
@@ -48,8 +50,11 @@
 
 .profile-image-box {
   width: 25%;
+  display: flex;
+  justify-content: center;
 
 }
+
 .profile-image-box img {
   width: 100%;
   height: 250px;
@@ -98,7 +103,7 @@
 }
 
 
-.profile-buttons button,.countries-button-right-side button {
+.profile-buttons button, .countries-button-right-side button {
   width: 120px;
   height: 40px;
   border-radius: 10px;
@@ -108,6 +113,7 @@
   cursor: pointer;
   border-style: none;
 }
+
 .profile-buttons button:hover, .countries-button-right-side button:hover {
   background: linear-gradient(to right, #9e3d34, #e43a15);
 }
@@ -116,6 +122,3 @@
   color: #e43a15;
   font-size: 1.2rem;
 }
-
-
-

@@ -1,3 +1,8 @@
+@media(max-width: 1450px) {
+  .partners-page-container {
+    width: 100%;
+  } 
+}
 @media(max-width: 1200px) {
   .cards-partners {
     grid-template-columns: repeat(4, 1fr);
@@ -17,7 +22,5 @@
   .partners-filters {
     flex-direction: column;
   }
-  .card-partner-about {
-    padding: 5px;
-  }
+
 }

@@ -1,0 +1,41 @@
+
+@media(min-width: 1800px) {
+  .profile-img-circle {
+    height: 95%;
+  }
+}
+
+@media(min-width: 1850px) {
+  .profile-img-circle {
+    width: 90%;
+  }
+}
+@media(min-width: 2224px) {
+  .profile-img-circle {
+    width: 83%;
+  }
+}
+
+@media(min-width: 2530px) {
+  .profile-img-circle {
+    width: 80%;
+  }
+}
+
+@media(min-width: 2700px) {
+  .profile-img-circle {
+    width: 68%;
+  }
+}
+
+@media(min-width: 2900px) {
+  .profile-img-circle {
+    width: 60%;
+  }
+}
+
+@media(max-width: 1670px) {
+  .profile-img-circle {
+    height: 97%;
+  }
+}

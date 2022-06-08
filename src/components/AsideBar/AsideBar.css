@@ -7,7 +7,9 @@
   margin: 20px 20px;
   border-radius: 10px;
   background-color: #ffff;
-  border: 0.5px solid gray;
+  /* border: 0.5px solid gray; */
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 2px;
+
 
 }
 
@@ -58,10 +60,12 @@
 .aside-profile-img {
   width: 36%;
   height: 19%;
+  display: flex;
+  justify-content: center;
 }
 
 .aside-profile-img img {
   width: 100%;
   height: 100%;
-  object-position: top;
+  object-position: center;
 }

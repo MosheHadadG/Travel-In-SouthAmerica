@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
 .header-navbar {
   background: linear-gradient(to right, #e65245, #e43a15); 
   /* background-color: #333; */
@@ -10,6 +11,7 @@
   display: flex;
   padding: 0 100px;
   gap: 10px;
+  font-family: 'Lexend Zetta', sans-serif;
 }
 
 .sub-header {
@@ -23,4 +25,5 @@
 .grey {
   color: #2e3336;
   font-size: 2.2rem;
+  font-weight: bold;
 }

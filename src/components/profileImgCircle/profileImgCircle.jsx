@@ -1,5 +1,6 @@
 import React from 'react'
 import './profileImgCircle.css'
+import './profileImgResponsice.css'
 
 function ProfileImgCircle({srcImg}) {
   return (
