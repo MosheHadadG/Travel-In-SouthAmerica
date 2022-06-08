@@ -20,7 +20,7 @@
   .cards-partners {
     grid-template-columns: repeat(2, 1fr);
     /* grid-column-gap: 5%; */
-    grid-row-gap: 0.4%;
+    grid-row-gap: 10px;
   }
   .partners-filters {
     flex-direction: column;
