@@ -14,12 +14,12 @@
   margin-bottom: 5px;
   border-radius: 10px;
   padding: 10px;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
   transition: 0.5s;
 }
 
 .card:hover {
-  border: 2px solid gray;
+  /* border: 2px solid gray; */
 }
 
 .card-img {

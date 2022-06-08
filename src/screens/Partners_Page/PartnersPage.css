@@ -18,9 +18,9 @@
 .partners-filters select {
   width: 250px;
   height: 40px;
-  /* color: #f4f4f4; */
   font-size: 1.1rem;
-  border: 2px solid #e65245;
+  border-radius: 5px;
+  outline: none;
 }
 .partners-filters select:hover {
   background: linear-gradient(to right, #e65245, #e43a15);
