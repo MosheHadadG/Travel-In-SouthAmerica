@@ -80,6 +80,9 @@ function Profile_Page(props) {
         <div className="profile-buttons">
           <Link to={`/partners`}><button>Back</button></Link>
         </div>
+        <div className='profie-created'>
+          <h4>This profile was created At {profile.createdAt.substring(0,10)}</h4>
+        </div>
       </div>
     );
   }

@@ -15,6 +15,7 @@ function Weather() {
     const capital = weather.location.name;
     const tempCelsius = weather.current.temp_c;
     const weatherIcon = weather.current.condition.icon
+    console.log(weather)
     setWeatherInfo({ capital, tempCelsius, randomCountry, weatherIcon })
   }
 

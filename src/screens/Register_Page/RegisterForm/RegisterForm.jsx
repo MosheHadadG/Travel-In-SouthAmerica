@@ -6,7 +6,6 @@ const initialState = {
   email: '',
   password: '',
   gender: '',
-  interests: '',
   age: '',
   city: '',
   urlAvatar: ''
@@ -18,9 +17,6 @@ function RegisterForm({ createNewUser }) {
   const handleChange = ({ target: { name: nameInput, value } }) => {
     setRegisterForm({ ...formRegister, [nameInput]: value })
   }
-
-  //! Need to create function check valid form
-
 
   const handleClick = (event) => {
     event.preventDefault()

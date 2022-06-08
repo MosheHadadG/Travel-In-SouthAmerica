@@ -5,9 +5,7 @@ import Weather from './Weather/Weather'
 import Destionations from './Destionations/Destionations'
 import Attractions from './Attractions/Attractions'
 import Spinner from '../../components/Spinner/Spinner'
-
 import './HomePage.css'
-
 
 
 function HomePage() {
@@ -15,14 +13,16 @@ function HomePage() {
 
   return (
     <div className='home-page-container'>
-     {state.spinner ? (<Spinner />): 
-     (
-       <>
-       <Weather />
-      <Destionations />
-      <Attractions />
-      </>
-      )}
+      {state.spinner ? (<Spinner />) :
+        (
+          <>
+          
+            <Weather />
+            <Destionations />
+            <Attractions />
+          </>
+
+        )}
 
 
     </div>
