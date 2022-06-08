@@ -1,0 +1,19 @@
+@media(max-width: 1000px) {
+  .destination-imgBox {
+    width: 70%;
+    height: 100%;
+}
+  .destination-info {
+    width: 68%;
+}
+
+}
+@media(max-width: 700px) {
+  .destination-imgBox {
+    width: 100%;
+
+}
+  .destination-info {
+    width: 87%;
+}
+}

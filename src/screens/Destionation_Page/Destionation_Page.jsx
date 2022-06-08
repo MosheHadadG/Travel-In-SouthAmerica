@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { myContext } from '../../context/myContext';
 import Spinner from '../../components/Spinner/Spinner';
 import './Destionation_Page.css'
+import './DestionationPageResponsive.css'
 
 function Destionation_Page(props) {
   const { destinations } = useContext(myContext)

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { myContext } from '../../context/myContext';
 import Spinner from '../../components/Spinner/Spinner';
 import './Attraction_Page.css'
+import './AttractionPageResponsive.css'
 
 function Attraction_Page(props) {
   const { attractions } = useContext(myContext)
