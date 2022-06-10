@@ -4,6 +4,7 @@ import { myContext } from '../../context/myContext'
 import RegisterForm from './RegisterForm/RegisterForm'
 
 import './RegisterPage.css'
+import './RegisterPageResponsive.css'
 
 function Register({ history }) {
   // Global State
